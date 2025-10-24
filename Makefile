@@ -1,7 +1,7 @@
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Wextra -g
-LIBS = -lsqlite3
+CFLAGS = -Wall -Wextra -g -O0
+LIBS = -lsqlite3 -lm
 
 # Source and output
 SRC = parking_tcp_server.c
@@ -16,4 +16,4 @@ $(OUT): $(SRC)
 
 # Clean rule
 clean:
-	rm -f $(OUT)
+	rm -f $(OUT) *.db

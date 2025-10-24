@@ -5,6 +5,7 @@
 #include <arpa/inet.h>
 #include <pthread.h>
 #include <sqlite3.h>
+#include <math.h>
 
 #include "park_mesage_protocol.h"
 
@@ -17,6 +18,9 @@ pthread_mutex_t session_lock = PTHREAD_MUTEX_INITIALIZER;
 void create_pricing_db (void);
 void *handle_client(void *arg);
 void handle_message(parking_message_t msg);
+int what_area(float lat, float lon);
+float price_per_area(int area);
+int calc_price(sqlite3 *db, parking_message_t msg);
 
 int main()
 {
@@ -26,11 +30,10 @@ int main()
     sqlite3 *parking_db;
     char *err_msg = 0;
 
-    if (sqlite3_open("parking.db", &parking_db)) { 
+    if (sqlite3_open("parking.db", &parking_db)) 
+    { 
         printf("Can't open database: %s\n", sqlite3_errmsg(parking_db));
         return 1;
-    } else {
-        printf("Opened database successfully.\n");
     }
     sql =
         "CREATE TABLE IF NOT EXISTS PARKING("
@@ -41,22 +44,19 @@ int main()
         "AREA INTEGER,"
         "START_TIME INTEGER,"
         "END_TIME INTEGER,"
-        "OVERALL_TIME INTEGER,"
         "PRICE REAL);";
 
     if (sqlite3_exec(parking_db, sql, 0, 0, &err_msg) != SQLITE_OK) {
         printf("SQL error: %s\n", err_msg);
         sqlite3_free(err_msg);
     } else {
-        printf("Table created successfully\n");
+        printf("PARKING Table created successfully\n");
     }
-    sqlite3_close(parking_db);
-
     create_pricing_db();
-    // handle_message((parking_message_t){"CAR123", 23.1, 65.967, 1, time(NULL) });
-    // handle_message((parking_message_t){"CAR456", 4, 65.5, 1, time(NULL) });
-    // sleep(3);
-    // handle_message((parking_message_t){"CAR123", 23.1, 65.967, 0, time(NULL) });
+    handle_message((parking_message_t){"CAR123", 23.1, 65.967, 1, time(NULL) });
+    handle_message((parking_message_t){"CAR456", 4, 63.5, 1, time(NULL) });
+    sleep(1);
+    handle_message((parking_message_t){"CAR123", 23.1, 65.967, 0, time(NULL) });
 
     // Creating a socket: 
     int server_fd, new_socket;
@@ -106,6 +106,8 @@ int main()
     }
 
     close(server_fd);
+    
+    sqlite3_close(parking_db);
     return 0;
 }
 
@@ -161,25 +163,7 @@ void handle_message(parking_message_t msg)
     }
     else // UPDATE end of parking
     {
-        sql = "UPDATE PARKING SET END_TIME = ? WHERE VEHICLE_ID = ? AND END_TIME IS NULL;";
-
-        if (sqlite3_prepare_v2(parking_db, sql, -1, &stmt, NULL) != SQLITE_OK)
-        {
-            fprintf(stderr, "Failed to prepare update: %s\n", sqlite3_errmsg(parking_db));
-            sqlite3_close(parking_db);
-            return;
-        }
-
-        sqlite3_bind_int64(stmt, 1, (sqlite3_int64)msg.time);
-        sqlite3_bind_text(stmt, 2, msg.vehicle_id, -1, SQLITE_STATIC);
-
-        if (sqlite3_step(stmt) != SQLITE_DONE)
-        {
-            fprintf(stderr, "Update failed: %s\n", sqlite3_errmsg(parking_db));
-
-        }
-
-        sqlite3_finalize(stmt);
+        calc_price(parking_db, msg);
     }
 
     sqlite3_close(parking_db);
@@ -195,8 +179,6 @@ void create_pricing_db(void)
         printf("Can't open database: %s\n", sqlite3_errmsg(pricing_db));
         return;
     } 
-    printf("Opened database successfully.\n");
-
     // Create table
     strcpy(sql,
         "CREATE TABLE IF NOT EXISTS PRICING("
@@ -205,24 +187,24 @@ void create_pricing_db(void)
         "LAT_MAX REAL,"
         "LON_MIN REAL,"
         "LON_MAX REAL,"
-        "PRICE REAL);");
+        "PRICE_PER_MIN REAL);");
 
     if (sqlite3_exec(pricing_db, sql, 0, 0, &err_msg) != SQLITE_OK) {
         printf("SQL error: %s\n", err_msg);
         sqlite3_free(err_msg);
     } else {
-        printf("Table created successfully\n");
+        printf("PRICING Table created successfully\n");
     }
 
     // Fill table
-    for (int i = 0; i < 50; i += 5)
+    for (int i = 0; i < 100; i += 20)
     {
-        for (int j = 0; j < 50; j += 5)
+        for (int j = 0; j < 100; j += 20)
         {
             snprintf(sql, sizeof(sql),
-                "INSERT INTO PRICING (LAT_MIN, LAT_MAX, LON_MIN, LON_MAX, PRICE) "
+                "INSERT INTO PRICING (LAT_MIN, LAT_MAX, LON_MIN, LON_MAX, PRICE_PER_MIN) "
                 "VALUES (%f, %f, %f, %f, %f);",
-                (float)i, (float)(i+5), (float)j, (float)(j+5), (float)(i+j));
+                (float)i, (float)(i+20), (float)j, (float)(j+20), (float)(i+j)*0.5); // Area segment and (random) pricing
 
             if (sqlite3_exec(pricing_db, sql, 0, 0, &err_msg) != SQLITE_OK) 
             { 
@@ -233,5 +215,135 @@ void create_pricing_db(void)
     }
 
     sqlite3_close(pricing_db);
+}
+
+int what_area(float lat, float lon)
+{
+    
+    sqlite3 *pricing_db;
+    sqlite3_stmt *stmt;
+    const char *sql = 
+        "SELECT AREA FROM PRICING "
+        "WHERE ? BETWEEN LAT_MIN AND LAT_MAX "
+        "AND ? BETWEEN LON_MIN AND LON_MAX;";
+
+    if (sqlite3_open("pricing.db", &pricing_db) != SQLITE_OK) {
+        printf("Cannot open DB: %s\n", sqlite3_errmsg(pricing_db));
+        return 1;
+    }
+
+    if (sqlite3_prepare_v2(pricing_db, sql, -1, &stmt, NULL) != SQLITE_OK) {
+        printf("Failed to prepare: %s\n", sqlite3_errmsg(pricing_db));
+        sqlite3_close(pricing_db);
+        return 0;
+    }
+
+    // bind latitude and longitude to the ? placeholders
+    sqlite3_bind_double(stmt, 1, round(lat));
+    sqlite3_bind_double(stmt, 2, round(lon));
+
+    int area = 0;
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        area = sqlite3_column_int(stmt, 0);
+    } else {
+        printf("No matching area found.\n");
+    }
+
+    sqlite3_finalize(stmt);
+    sqlite3_close(pricing_db);
+    return area;
+}
+
+float price_per_area(int area)
+{
+    
+    sqlite3 *pricing_db;
+    sqlite3_stmt *stmt;
+    float price = 0.0;
+
+    if (sqlite3_open("pricing.db", &pricing_db) != SQLITE_OK) {
+        printf("Cannot open DB: %s\n", sqlite3_errmsg(pricing_db));
+        return 1;
+    }
+    const char *sql = "SELECT PRICE_PER_MIN FROM PRICING WHERE AREA = ?;";
+
+    if (sqlite3_prepare_v2(pricing_db, sql, -1, &stmt, NULL) != SQLITE_OK) {
+        printf("Failed to prepare statement: %s\n", sqlite3_errmsg(pricing_db));
+        sqlite3_close(pricing_db);
+        return 0.0f;
+    }
+
+    // bind the area value into the query
+    sqlite3_bind_int(stmt, 1, area);
+
+    // execute the query and get the result
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        price = (float)sqlite3_column_double(stmt, 0);
+    } else {
+        printf("No price found for area %d\n", area);
+    }
+    sqlite3_finalize(stmt);
+    sqlite3_close(pricing_db);
+
+    return price;
+}
+
+int calc_price(sqlite3 *db, parking_message_t msg)
+{
+    sqlite3_stmt *stmt;
+    time_t start_time, end_of_parking= msg.time;
+    float total_price = 0.0f;
+
+    // Get START_TIME from PARKING table
+    const char *select_sql =
+        "SELECT START_TIME FROM PARKING "
+        "WHERE VEHICLE_ID = ? AND END_TIME IS NULL;";
+
+    if (sqlite3_prepare_v2(db, select_sql, -1, &stmt, NULL) != SQLITE_OK) {
+        printf("Failed to prepare SELECT: %s\n", sqlite3_errmsg(db));
+        return -1;
+    }
+
+    sqlite3_bind_text(stmt, 1, msg.vehicle_id, -1, SQLITE_STATIC);
+
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        start_time = sqlite3_column_int64(stmt, 0);
+    } else {
+        printf("No matching record found for vehicle %s\n", msg.vehicle_id);
+        sqlite3_finalize(stmt);
+        return -1;
+    }
+    sqlite3_finalize(stmt);
+
+    // Calculate total price
+    int area = what_area(msg.lat, msg.lon);
+    double duration_minutes = difftime(end_of_parking, start_time) / 60.0;
+    total_price = (float)(duration_minutes * price_per_area(area));
+
+    // Update PRICE column
+    const char *update_sql =
+        "UPDATE PARKING "
+        "SET AREA = ?, END_TIME = ?, PRICE = ROUND(?,2) "
+        "WHERE VEHICLE_ID = ? AND END_TIME IS NULL;";
+
+    if (sqlite3_prepare_v2(db, update_sql, -1, &stmt, NULL) != SQLITE_OK) {
+        printf("Failed to prepare UPDATE: %s\n", sqlite3_errmsg(db));
+        return -1;
+    }
+
+    sqlite3_bind_int(stmt, 1, area);
+    sqlite3_bind_int(stmt, 2, end_of_parking);
+    sqlite3_bind_double(stmt, 3, total_price);
+    sqlite3_bind_text(stmt, 4, msg.vehicle_id, -1, SQLITE_STATIC);
+
+    if (sqlite3_step(stmt) != SQLITE_DONE) {
+        printf("Failed to execute UPDATE: %s\n", sqlite3_errmsg(db));
+        sqlite3_finalize(stmt);
+        return -1;
+    }
+
+    sqlite3_finalize(stmt);
+    printf("Updated price for vehicle %s (area %d): %.2f\n", msg.vehicle_id, area, total_price);
+    return 0;
 }
 
