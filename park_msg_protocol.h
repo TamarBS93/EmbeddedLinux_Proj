@@ -19,5 +19,4 @@ typedef struct parking_message_t {
 } parking_message_t;
 #pragma pack()  // Restore default packing
 
-
 #endif // PARK_MESSAGE_H
