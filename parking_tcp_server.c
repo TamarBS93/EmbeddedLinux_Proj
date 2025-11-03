@@ -11,6 +11,8 @@
 #include "park_msg_protocol.h"
 #include "pricing_db_handling.h"
 
+#define PARKING_DB_PATH "DBs/parking.db"
+
 pthread_mutex_t parking_db_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t pricing_db_mutex = PTHREAD_MUTEX_INITIALIZER;
 
@@ -35,7 +37,6 @@ void read_configurations(){
         fscanf(cfg, "SERVER_PORT %d\n", &server_port);
         fscanf(cfg, "SERVER_IP %s\n", server_ip);
         server_ip[strcspn(server_ip, "\r\n")] = '\0';
-        fscanf(cfg, "\nSHM_SIZE %zu\n", &shm_size);
         fscanf(cfg, "PRICING_DB %s\n", pricing_db_path);
         fclose(cfg);
     } else {
@@ -55,7 +56,7 @@ int main()
     sqlite3 *parking_db;
     char *err_msg = 0;
 
-    if (sqlite3_open("parking.db", &parking_db)) 
+    if (sqlite3_open(PARKING_DB_PATH, &parking_db)) 
     { 
         printf("Can't open database: %s\n", sqlite3_errmsg(parking_db));
         return 1;
@@ -188,7 +189,7 @@ void handle_message(parking_message_t msg)
         printf("Failed to lock mutex\n");
     }
 
-    if (sqlite3_open("parking.db", &parking_db)) { 
+    if (sqlite3_open(PARKING_DB_PATH, &parking_db)) { 
         fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(parking_db));
         return;
     }
@@ -309,50 +310,3 @@ int calc_price(sqlite3 *db, parking_message_t msg)
     return 0;
 }
 
-void create_pricing_db(void)
-{
-    sqlite3 *pricing_db;
-    char *err_msg = 0;
-    char sql[512];
-
-    if (sqlite3_open("pricing.db", &pricing_db)) { 
-        printf("Can't open database: %s\n", sqlite3_errmsg(pricing_db));
-        return;
-    } 
-    // Create table
-    strcpy(sql,
-        "CREATE TABLE IF NOT EXISTS PRICING("
-        "AREA INTEGER PRIMARY KEY AUTOINCREMENT,"
-        "LAT_MIN REAL,"
-        "LAT_MAX REAL,"
-        "LON_MIN REAL,"
-        "LON_MAX REAL,"
-        "PRICE_PER_MIN REAL);");
-
-    if (sqlite3_exec(pricing_db, sql, 0, 0, &err_msg) != SQLITE_OK) {
-        printf("SQL error: %s\n", err_msg);
-        sqlite3_free(err_msg);
-    } else {
-        printf("PRICING Table created successfully\n");
-    }
-
-    // Fill table
-    for (int i = 0; i < 100; i += 20)
-    {
-        for (int j = 0; j < 100; j += 20)
-        {
-            snprintf(sql, sizeof(sql),
-                "INSERT INTO PRICING (LAT_MIN, LAT_MAX, LON_MIN, LON_MAX, PRICE_PER_MIN) "
-                "VALUES (%f, %f, %f, %f, %f);",
-                (float)i, (float)(i+20), (float)j, (float)(j+20), (float)(i+j)*0.5); // Area segment and (random) pricing
-
-            if (sqlite3_exec(pricing_db, sql, 0, 0, &err_msg) != SQLITE_OK) 
-            { 
-                printf("SQL error: %s\n", err_msg);
-                sqlite3_free(err_msg); 
-            }
-        }
-    }
-
-    sqlite3_close(pricing_db);
-}

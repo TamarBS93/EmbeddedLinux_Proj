@@ -6,20 +6,22 @@
 #include <sqlite3.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
+#include <sys/inotify.h>
+#include <limits.h>
 
-#include "park_msg_protocol.h"
 #include "pricing_db_handling.h"
+
+#define PRICING_DB_PATH "DBs/parking.db"
 
 shm_pricing_block_t *shm_ptr;
 
 sqlite3* create_pricing_db(void);
 int load_pricing_into_shm(sqlite3 *db, pricing_entry_t *table);
+void watch_db_file(const char *path, sqlite3 *db);
 
 int server_port;
 char server_ip[32];
 
-size_t shm_size;
-char pricing_db_path[16];
 pricing_entry_t *pricing_table = NULL;
 int num_pricing_areas = 0;
 
@@ -29,8 +31,6 @@ void read_configurations(){
         fscanf(cfg, "SERVER_PORT %d\n", &server_port);
         fscanf(cfg, "SERVER_IP %s\n", server_ip);
         server_ip[strcspn(server_ip, "\r\n")] = '\0';
-        fscanf(cfg, "\nSHM_SIZE %zu\n", &shm_size);
-        fscanf(cfg, "PRICING_DB %s\n", pricing_db_path);
         fclose(cfg);
     } else {
         perror("Could not open config file");
@@ -51,7 +51,7 @@ int main()
     }
 
     // Setup shared memory for pricing table
-    key_t key = ftok(pricing_db_path, 65);   // generate a unique key
+    key_t key = ftok(PRICING_DB_PATH, 65);   // generate a unique key
     if (key == -1) { perror("ftok"); exit(1); }
 
     int shmid = shmget(key, sizeof(shm_pricing_block_t), 0666 | IPC_CREAT);
@@ -75,6 +75,8 @@ int main()
     shm_ptr->num_pricing_areas = load_pricing_into_shm(pricing_db, shm_ptr->table);
     pthread_mutex_unlock(&shm_ptr->shm_mutex);
 
+    
+    watch_db_file(PRICING_DB_PATH, pricing_db);
     sqlite3_close(pricing_db);
 
     shmdt(shm_ptr); // detach
@@ -89,7 +91,7 @@ sqlite3* create_pricing_db(void)
     char sql[512];
     sqlite3 *pricing_db;
 
-    if (sqlite3_open(pricing_db_path, &pricing_db)) { 
+    if (sqlite3_open(PRICING_DB_PATH, &pricing_db)) { 
         printf("Can't open database: %s\n", sqlite3_errmsg(pricing_db));
         return NULL;
     } 
@@ -147,4 +149,27 @@ int load_pricing_into_shm(sqlite3 *db, pricing_entry_t *table) {
     }
     sqlite3_finalize(stmt);
     return i;
+}
+
+void watch_db_file(const char *path, sqlite3 *db) {
+    int fd = inotify_init();
+    if (fd < 0) { perror("inotify_init"); exit(1); }
+
+    int wd = inotify_add_watch(fd, path, IN_MODIFY | IN_CLOSE_WRITE);
+    if (wd < 0) { perror("inotify_add_watch"); exit(1); }
+
+    printf("Watching %s for updates...\n", path);
+
+    char buffer[sizeof(struct inotify_event) + NAME_MAX + 1];
+
+    while (1) {
+        int length = read(fd, buffer, sizeof(buffer));
+        if (length < 0) continue;
+
+        pthread_mutex_lock(&shm_ptr->shm_mutex);
+        shm_ptr->num_pricing_areas = load_pricing_into_shm(db, shm_ptr->table);
+        pthread_mutex_unlock(&shm_ptr->shm_mutex);
+
+        printf("Database modified → SHM updated!\n");
+    }
 }

@@ -28,6 +28,6 @@ run: all
 
 # --- Clean build files ---
 clean:
-	rm -f $(SERVER) $(PRICEDB) parking.db
+	rm -f $(SERVER) $(PRICEDB) DBs/parking.db
 
 
