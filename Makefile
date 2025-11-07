@@ -4,8 +4,8 @@ CFLAGS = -Wall -Wextra -pthread -g -O0
 LIBS = -lsqlite3 -lm
 
 # Executable names
-SERVER = parking_tcp_server
-PRICEDB = pricing_db_handling
+SERVER = server
+PRICEDB = pricing
 
 # Source files
 SERVER_SRC = parking_tcp_server.c
@@ -23,11 +23,11 @@ $(PRICEDB): $(PRICEDB_SRC)
 run: all
 	@echo "Starting pricing_db_handling and parking_tcp_server..."
 	@./$(PRICEDB) & \
-	sleep 1; \
+	sleep 2; \
 	./$(SERVER)
 
 # --- Clean build files ---
 clean:
-	rm -f $(SERVER) $(PRICEDB) DBs/parking.db
+	rm -f $(SERVER) $(PRICEDB) DBs/*.db
 
 

@@ -17,6 +17,7 @@ typedef struct {
 typedef struct {
     pthread_mutex_t shm_mutex;          // shared between processes
     int num_pricing_areas;
+    volatile int ready;          // 0 = not ready, 1 = ready
     pricing_entry_t table[100];
 } shm_pricing_block_t;
 #pragma pack()  // Restore default packing

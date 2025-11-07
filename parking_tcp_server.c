@@ -14,7 +14,6 @@
 #define PARKING_DB_PATH "DBs/parking.db"
 
 pthread_mutex_t parking_db_mutex = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t pricing_db_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void create_pricing_db (void);
 void *handle_client(void *arg);
@@ -27,9 +26,9 @@ int server_port;
 char server_ip[32];
 size_t shm_size;
 char pricing_db_path[16];
-pricing_entry_t *pricing_table = NULL;
-int num_pricing_areas = 0;
-
+// pricing_entry_t *pricing_table = NULL;
+// int num_pricing_areas = 0;
+shm_pricing_block_t *shm_ptr = NULL;
 
 void read_configurations(){
     FILE *cfg = fopen("server.config", "r");
@@ -79,28 +78,37 @@ int main()
         printf("PARKING Table created successfully\n");
     }
 
-    // Shared memory for pricing table ------------------
+    // Shared memory for pricing table -----------------------
     key_t key = ftok(pricing_db_path, 65);   // generate a unique key
     if (key == -1) { perror("ftok"); exit(1); }
 
-    int shmid = shmget(key, sizeof(shm_pricing_block_t), 0666 | IPC_CREAT);
-    if (shmid == -1) { perror("shmget"); exit(1); }
+    int shmid = -1;
+    while ((shmid = shmget(key, sizeof(shm_pricing_block_t), 0666 | IPC_CREAT)) < 0) {
+        perror("Waiting for SHM to be ready...");
+        sleep(1);
+    }
 
     // Load pricing table into shared memory
-    shm_pricing_block_t *shm_ptr = shmat(shmid, NULL, 0);
+    shm_ptr = shmat(shmid, NULL, 0);
     if (shm_ptr == (void *) -1) { perror("shmat"); exit(1); }
 
-    pthread_mutex_lock(&shm_ptr->shm_mutex);
-    pricing_table = shm_ptr->table;
-    num_pricing_areas = shm_ptr->num_pricing_areas;
-    pthread_mutex_unlock(&shm_ptr->shm_mutex);
+    // Make Sure the SHM is fully loaded
+    while (shm_ptr->ready == 0) {
+        printf("Waiting for pricing SHM to be ready...\n");
+        usleep(500000); // half a second
+    }
+    // pthread_mutex_lock(&shm_ptr->shm_mutex);
+    // pricing_table = shm_ptr->table;
+    // num_pricing_areas = shm_ptr->num_pricing_areas;
+    // pthread_mutex_unlock(&shm_ptr->shm_mutex);
     // ------------------------------------------------------
 
     // For testing purposes, simulate some parking messages
     handle_message((parking_message_t){"CAR123", 23.1, 65.967, 1, time(NULL) });
     handle_message((parking_message_t){"CAR456", 4, 63.5, 1, time(NULL) });
-    sleep(1);
+    sleep(3);
     handle_message((parking_message_t){"CAR123", 23.1, 65.967, 0, time(NULL) });
+    handle_message((parking_message_t){"CAR456", 4, 63.5, 0, time(NULL) });
 
     // // Creating a socket: 
     // int server_fd, new_socket;
@@ -156,7 +164,9 @@ int main()
     // }
 
     // close(server_fd);
-    
+    while (1) {
+        sleep(1);
+    }
     sqlite3_close(parking_db);
     shmdt(shm_ptr); // detach shm
     // shmctl(shmid, IPC_RMID, NULL); // remove shared memory (optional)
@@ -230,23 +240,39 @@ void handle_message(parking_message_t msg)
 
 int what_area(float lat, float lon)
 {
-    for (int i = 0; i < num_pricing_areas; i++) {
-        if (lat >= pricing_table[i].lat_min && lat <= pricing_table[i].lat_max &&
-            lon >= pricing_table[i].lon_min && lon <= pricing_table[i].lon_max) {
-            return pricing_table[i].area_id;
+    // for (int attempt = 0; attempt < 2; attempt++) {
+    pthread_mutex_lock(&shm_ptr->shm_mutex);
+    for (int i = 0; i < shm_ptr->num_pricing_areas; i++) {
+        if (lat >= shm_ptr->table[i].lat_min && lat <= shm_ptr->table[i].lat_max &&
+            lon >= shm_ptr->table[i].lon_min && lon <= shm_ptr->table[i].lon_max) 
+            {
+            pthread_mutex_unlock(&shm_ptr->shm_mutex);
+            return shm_ptr->table[i].area_id;
         }
     }
-    printf("No matching area found for lat %.2f lon %.2f\n", lat, lon);
+    pthread_mutex_unlock(&shm_ptr->shm_mutex);
+
+    //     // If not found, wait a bit and retry (in case pricing table was being updated)
+    //     printf("No matching area found.searching again...\n");
+    //     usleep(500000); // 100 ms
+    // }
+    printf("Could not determine area for lat %.2f lon %.2f after retries\n", lat, lon);
     return -1;  
 }
 
 float price_per_area(int area)
 {
-    for (int i = 0; i < num_pricing_areas; i++) {
-        if (pricing_table[i].area_id == area) {
-            return pricing_table[i].price_per_min;
+    if (area < 0) {
+        return -1;
+    }
+    pthread_mutex_lock(&shm_ptr->shm_mutex);
+    for (int i = 0; i < shm_ptr->num_pricing_areas; i++) {
+        if (shm_ptr->table[i].area_id == area) {
+            pthread_mutex_unlock(&shm_ptr->shm_mutex);
+            return shm_ptr->table[i].price_per_min;
         }
     }
+    pthread_mutex_unlock(&shm_ptr->shm_mutex);
     printf("No price found for area %d\n", area);
     return 0.0f;
 }
@@ -280,8 +306,17 @@ int calc_price(sqlite3 *db, parking_message_t msg)
 
     // Calculate total price
     int area = what_area(msg.lat, msg.lon);
+    if (area < 0) {
+        printf("Could not determine area for vehicle %s\n", msg.vehicle_id);
+        return -1;
+    }
     double duration_minutes = difftime(end_of_parking, start_time) / 60.0;
-    total_price = (float)(duration_minutes * price_per_area(area));
+    double price = price_per_area(area);
+    if (price < 0) {
+        printf("Could not determine price for area %d\n", area);
+        return -1;
+    }
+    total_price = (float)(duration_minutes * price);
 
     // Update PRICE column
     const char *update_sql =
