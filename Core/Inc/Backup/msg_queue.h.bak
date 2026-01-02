@@ -1,0 +1,29 @@
+/*
+ * msg_queue.h
+ *
+ *  Created on: Dec 31, 2025
+ *      Author: Tamar Ben Shushan
+ */
+
+#ifndef INC_MSG_QUEUE_H_
+#define INC_MSG_QUEUE_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "park_msg_protocol.h"
+
+#define MSG_SIZE 49
+
+typedef struct Node {
+    parking_message_t msg;
+    struct Node* next;
+} Node;
+
+typedef struct {
+    Node* head;  // points to first message (oldest)
+    Node* tail;  // points to last message (newest)
+} MessageQueue;
+
+#endif /* INC_MSG_QUEUE_H_ */
