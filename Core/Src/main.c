@@ -91,20 +91,21 @@ const osMessageQueueAttr_t msgQueue_attributes = {
   .name = "msgQueue"
 };
 /* USER CODE BEGIN PV */
+static parking_message_t tx_msg;
+static volatile uint8_t tx_ready = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_ETH_Init(void);
-static void MX_I2C1_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_FS_PCD_Init(void);
+static void MX_I2C1_Init(void);
 void StartGPSGenTask(void *argument);
-void blinking_blue(void *argument);
+void blinking_led(void *argument);
 
 /* USER CODE BEGIN PFP */
-void StartGPSGenTask(void *argument);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -142,11 +143,24 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_ETH_Init();
-  MX_I2C1_Init();
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  HAL_I2C_EnableListen_IT(&hi2c1);
+  srand(HAL_GetTick()); // Seed the random generator
+
+//  if (HAL_I2C_EnableListen_IT(&hi2c1) != HAL_OK) {
+//      // If this triggers, your I2C peripheral failed to start listening
+//      HAL_GPIO_WritePin(GPIOB, LD3_Pin, GPIO_PIN_SET); // Turn on Red LED
+//  }
+//  memset(&tx_msg, 0, sizeof(tx_msg));
+//   tx_msg.is_parking = -1;
+//   tx_ready = 1;
+//   // 2. Clear any old bus errors
+//   __HAL_I2C_CLEAR_FLAG(&hi2c1, I2C_FLAG_AF | I2C_FLAG_BERR);
+//// start listening to master
+//   HAL_I2C_EnableListen_IT(&hi2c1); // Start the state machine
+
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -166,7 +180,7 @@ int main(void)
 
   /* Create the queue(s) */
   /* creation of msgQueue */
-  msgQueueHandle = osMessageQueueNew (50, 29, &msgQueue_attributes);
+  msgQueueHandle = osMessageQueueNew (50, 28, &msgQueue_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -177,7 +191,7 @@ int main(void)
   defaultTaskHandle = osThreadNew(StartGPSGenTask, NULL, &defaultTask_attributes);
 
   /* creation of myTask02 */
-  myTask02Handle = osThreadNew(blinking_blue, NULL, &myTask02_attributes);
+  myTask02Handle = osThreadNew(blinking_led, NULL, &myTask02_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -194,8 +208,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
+	  if (tx_ready)
+	  {
+		HAL_I2C_Slave_Transmit_IT(&hi2c1, (uint8_t*)&tx_msg, sizeof(tx_msg));
+	  }
 
     /* USER CODE END WHILE */
 
@@ -320,7 +339,7 @@ static void MX_I2C1_Init(void)
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
   hi2c1.Init.Timing = 0x00808CD2;
-  hi2c1.Init.OwnAddress1 = 132;
+  hi2c1.Init.OwnAddress1 = 32;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
   hi2c1.Init.OwnAddress2 = 0;
@@ -481,65 +500,51 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_I2C_SlaveTxCpltCallback(I2C_HandleTypeDef *hi2c)
 {
-    HAL_I2C_EnableListen_IT(hi2c);
+	printf("msg transmit complete\r\n");
+	tx_ready = 0;
+//    HAL_I2C_EnableListen_IT(hi2c);
 }
 
-void HAL_I2C_AddrCallback(I2C_HandleTypeDef *hi2c, uint8_t TransferDirection, uint16_t AddrMatchCode)
+//void HAL_I2C_ErrorCallback(I2C_HandleTypeDef *hi2c)
+//{
+////    HAL_I2C_EnableListen_IT(hi2c);
+//}
+void HAL_I2C_ListenCpltCallback(I2C_HandleTypeDef *hi2c)
 {
-    if (hi2c->Instance == I2C1)
-    {
-        if (TransferDirection == I2C_DIRECTION_RECEIVE)
-        {
-        	parking_message_t parking_msg={0};
-
-            // Master wants to READ from STM32
-        	if(osMessageQueueGet(msgQueueHandle, &parking_msg, 0, 0) == osOK){
-                printf("Msg sent via I2C:\r\n");
-                printf("  Vehicle ID : %s\r\n", parking_msg.vehicle_id);
-                printf("  Latitude   : %f\r\n", parking_msg.lat);
-                printf("  Longitude  : %f\r\n", parking_msg.lon);
-                printf("  Parking    : %d\r\n", parking_msg.is_parking);
-                printf("  Timestamp  : %llu\r\n", (unsigned long long)parking_msg.time);
-                HAL_I2C_Slave_Seq_Transmit_IT(hi2c,(uint8_t*)&parking_msg,sizeof(parking_msg),I2C_LAST_FRAME);
-        	}
-        	else{
-            	parking_message_t empty_msg={0};
-
-                HAL_I2C_Slave_Seq_Transmit_IT(hi2c,(uint8_t*)&empty_msg,sizeof(empty_msg),I2C_LAST_FRAME);
-                printf("Empty Msg sent via I2C\r\n");
-        	}
-        }
-        else
-        {
-//            // Master wants to WRITE to STM32 (optional)
-//            HAL_I2C_Slave_Seq_Receive_IT(hi2c,rx_buffer,RX_SIZE,I2C_LAST_FRAME);
-        }
-    }
+//    HAL_I2C_Slave_Transmit_IT(hi2c, (uint8_t *)&tx_msg, sizeof(tx_msg));
 }
 
-void generate_random_gps(char car[32])
+//void HAL_I2C_AddrCallback(I2C_HandleTypeDef *hi2c, uint8_t TransferDirection, uint16_t AddrMatchCode)
+//{
+//    if (TransferDirection == I2C_DIRECTION_RECEIVE) // Master wants to READ
+//    {
+//        // Start the non-blocking transfer
+//        HAL_I2C_Slave_Transmit_IT(hi2c, (uint8_t*)&tx_msg, sizeof(tx_msg));
+//    }
+//}
+
+void generate_random_gps(const char* car)
 {
-	parking_message_t msg1, msg2;
+	parking_message_t msg={0};
 
-    strcpy(msg1.vehicle_id, car);
+	memset(&msg, 0, sizeof(msg));
+    strncpy(msg.vehicle_id, car,sizeof(msg.vehicle_id) - 1);
 
-    msg1.lat = ((float)rand() / (float)RAND_MAX) * 100.0f;
-    msg1.lon = ((float)rand() / (float)RAND_MAX) * 100.0f;
+    msg.lat = ((float)rand() / (float)RAND_MAX) * 100.0f;
+    msg.lon = ((float)rand() / (float)RAND_MAX) * 100.0f;
 
-    msg1.is_parking = PARK_START;
-    msg1.time = HAL_GetTick(); // or RTC time
+    msg.is_parking = PARK_START;
+    msg.time = 0; //HAL_GetTick(); // or RTC time
 
-    if (osMessageQueuePut(msgQueueHandle, &msg1, 0, osWaitForever) != osOK){
-    	// handle error
+    if (osMessageQueuePut(msgQueueHandle, &msg, 0, 0) == osOK){
+//    	tx_ready=1;
     }
 //    printf("Start Msg inserted to Queue\r\n");
 
-    HAL_Delay(1000 + rand() % 19901);
-    msg2 = msg1;
-    msg2.is_parking = PARK_END;
-    msg2.time = HAL_GetTick(); // or RTC time
-    if (osMessageQueuePut(msgQueueHandle, &msg2, 0, osWaitForever) != osOK){
-    	// handle error
+    osDelay(1000 + rand() % 19901);
+    msg.is_parking = PARK_END;
+    if (osMessageQueuePut(msgQueueHandle, &msg, 0, 0) == osOK){
+//    	tx_ready=1;
     }
 //    printf("End Msg inserted to Queue\r\n");
 
@@ -563,37 +568,47 @@ void StartGPSGenTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
 	printf("GPS generator starts\r\n");
+
   /* Infinite loop */
   for(;;)
   {
+	generate_random_gps("CAR001");
+	osDelay(100 + rand()%1900);
+	generate_random_gps("CAR002");
+	osDelay(100 + rand()%1900);
+	generate_random_gps("CAR003");
+	osDelay(100 + rand()%1900);
 
-	generate_random_gps("CAR_001");
-	osDelay(100 + rand()%1900);
-	generate_random_gps("CAR_002");
-	osDelay(100 + rand()%1900);
-	generate_random_gps("CAR_003");
-    osDelay(1);
+	if (!tx_ready) {
+		if (osMessageQueueGet(msgQueueHandle, &tx_msg, NULL, 0) != osOK) {
+			memset(&tx_msg, 0, sizeof(tx_msg));
+			tx_msg.is_parking = -1;
+		}
+		tx_ready = 1;
+	}
+	osDelay(100); // Give 1sec to other tasks and the system
+
   }
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_blinking_blue */
+/* USER CODE BEGIN Header_blinking_led */
 /**
 * @brief Function implementing the myTask02 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_blinking_blue */
-void blinking_blue(void *argument)
+/* USER CODE END Header_blinking_led */
+void blinking_led(void *argument)
 {
-  /* USER CODE BEGIN blinking_blue */
+  /* USER CODE BEGIN blinking_led */
   /* Infinite loop */
   for(;;)
   {
-	/* visual heartbeat */
 	HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
-	osDelay(1000);  }
-  /* USER CODE END blinking_blue */
+	osDelay(1000);
+  }
+  /* USER CODE END blinking_led */
 }
 
 /**
