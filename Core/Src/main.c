@@ -162,16 +162,6 @@ int main(void)
       HAL_GPIO_WritePin(GPIOB, LD3_Pin, GPIO_PIN_SET); // Turn on Red LED
       Error_Handler();
   }
-//  memset(&tx_msg, 0, sizeof(tx_msg));
-//   tx_msg.is_parking = -1;
-//   tx_ready = 1;
-//	HAL_I2C_Slave_Transmit_IT(&hi2c1, (uint8_t*)&tx_msg, sizeof(tx_msg));
-
-//   // 2. Clear any old bus errors
-//   __HAL_I2C_CLEAR_FLAG(&hi2c1, I2C_FLAG_AF | I2C_FLAG_BERR);
-//// start listening to master
-//   HAL_I2C_EnableListen_IT(&hi2c1); // Start the state machine
-
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -508,7 +498,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_I2C_SlaveTxCpltCallback(I2C_HandleTypeDef *hi2c)
 {
-	printf("msg transmit complete\r\n");
+//	printf("msg transmit complete\r\n");
 	tx_ready = 0;
     HAL_I2C_EnableListen_IT(hi2c);
 }
@@ -530,37 +520,39 @@ void HAL_I2C_AddrCallback(I2C_HandleTypeDef *hi2c, uint8_t TransferDirection, ui
     }
 }
 
-//void generate_random_gps(const char* car)
-//{
-//	parking_message_t msg={0};
-//
-//	memset(&msg, 0, sizeof(msg));
-////    strncpy(msg.vehicle_id, car,sizeof(msg.vehicle_id) - 1);
-//
-//	// Generate a random car number between 0 and 999
-//	int random_num = rand() % 1000;
-//
-//	// Format the string: "CAR" + 3-digit number with leading zeros
-//	snprintf(msg.vehicle_id, sizeof(msg.vehicle_id), "CAR%03d", random_num);
-//
-//    msg.lat = ((float)rand() / (float)RAND_MAX) * 100.0f;
-//    msg.lon = ((float)rand() / (float)RAND_MAX) * 100.0f;
-//
-//    msg.is_parking = PARK_START;
-//    msg.time = 0; //HAL_GetTick(); // or RTC time
-//
-//    if (osMessageQueuePut(msgQueueHandle, &msg, 0, 0) != osOK){
-//    }
-//    osDelay(1000 + rand() % 19901);
-//    msg.is_parking = PARK_END;
-//    if (osMessageQueuePut(msgQueueHandle, &msg, 0, 0) != osOK){
-//    }
-//}
-
 int __io_putchar(int ch)
 {
     HAL_UART_Transmit(&huart3, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
     return ch;
+}
+
+void CarTask(void *argument) {
+
+    parking_message_t msg;
+    // Copy the initial message data (ID, etc) from the argument
+    memcpy(&msg, (parking_message_t*)argument, sizeof(parking_message_t));
+    free(argument); // Free the memory we allocated to pass the ID
+
+	msg.lat = ((float)rand() / (float)RAND_MAX) * 100.0f;
+	msg.lon = ((float)rand() / (float)RAND_MAX) * 100.0f;
+
+	msg.is_parking = PARK_START;
+	msg.time = 0;
+
+	// Send START message
+	if (osMessageQueuePut(msgQueueHandle, &msg, 0, 10) != osOK){
+		printf("Failed to add msg to queue\r\n");
+	}
+	osDelay(10000 + (rand() % 20000)); // Parks for 10-30 seconds
+	msg.is_parking = PARK_END;
+
+	// Send END message
+	if (osMessageQueuePut(msgQueueHandle, &msg, 0, 10) != osOK){
+		printf("Failed to add msg to queue\r\n");
+	}
+
+	osThreadTerminate(osThreadGetId()); // Kill this task when done
+
 }
 /* USER CODE END 4 */
 
@@ -574,41 +566,27 @@ int __io_putchar(int ch)
 void StartGPSGenTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
-	printf("GPS generator starts\r\n");
-//	generate_random_gps("CAR001");
-////	osDelay(100 + rand()%1900);
-//	generate_random_gps("CAR002");
-////	osDelay(100 + rand()%1900);
-//	generate_random_gps("CAR003");
-//	osDelay(100 + rand()%1900);
-
+//	printf("GPS generator starts\r\n");
   /* Infinite loop */
   for(;;)
   {
-	parking_message_t msg={0};
+	  // Create a new car structure on the heap to pass to the thread
+	  parking_message_t *new_car = malloc(sizeof(parking_message_t));
+	  memset(new_car, 0, sizeof(parking_message_t));
 
-	memset(&msg, 0, sizeof(msg));
-	// strncpy(msg.vehicle_id, car,sizeof(msg.vehicle_id) - 1);
+	  int random_num = rand() % 1000;
+	  snprintf(new_car->vehicle_id, sizeof(new_car->vehicle_id), "CAR%03d", random_num);
 
-	// Generate a random car number between 0 and 999
-	int random_num = rand() % 1000;
+	  // Spawn a new task for THIS specific car
+	  osThreadAttr_t attr = {0};
+	  attr.name = "CarThread";
+	  attr.stack_size = 256 * 4;
+	  attr.priority = osPriorityLow;
 
-	// Format the string: "CAR" + 3-digit number with leading zeros
-	snprintf(msg.vehicle_id, sizeof(msg.vehicle_id), "CAR%03d", random_num);
+	  osThreadNew(CarTask, new_car, &attr);
 
-	msg.lat = ((float)rand() / (float)RAND_MAX) * 100.0f;
-	msg.lon = ((float)rand() / (float)RAND_MAX) * 100.0f;
-
-	msg.is_parking = PARK_START;
-	msg.time = 0; //HAL_GetTick(); // or RTC time
-
-	if (osMessageQueuePut(msgQueueHandle, &msg, 0, 0) != osOK){
-	}
-	osDelay(1000 + rand() % 19901);
-	msg.is_parking = PARK_END;
-	if (osMessageQueuePut(msgQueueHandle, &msg, 0, 0) != osOK){
-	}
-
+	  // Wait a bit before spawning the NEXT new car
+	  osDelay(5000);
   }
   /* USER CODE END 5 */
 }
