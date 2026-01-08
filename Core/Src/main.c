@@ -85,6 +85,13 @@ const osThreadAttr_t myTask02_attributes = {
   .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for myTask03 */
+osThreadId_t myTask03Handle;
+const osThreadAttr_t myTask03_attributes = {
+  .name = "myTask03",
+  .stack_size = 256 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for msgQueue */
 osMessageQueueId_t msgQueueHandle;
 const osMessageQueueAttr_t msgQueue_attributes = {
@@ -104,6 +111,7 @@ static void MX_USB_OTG_FS_PCD_Init(void);
 static void MX_I2C1_Init(void);
 void StartGPSGenTask(void *argument);
 void blinking_led(void *argument);
+void get_from_queue(void *argument);
 
 /* USER CODE BEGIN PFP */
 /* USER CODE END PFP */
@@ -195,6 +203,9 @@ int main(void)
 
   /* creation of myTask02 */
   myTask02Handle = osThreadNew(blinking_led, NULL, &myTask02_attributes);
+
+  /* creation of myTask03 */
+  myTask03Handle = osThreadNew(get_from_queue, NULL, &myTask03_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -519,26 +530,32 @@ void HAL_I2C_AddrCallback(I2C_HandleTypeDef *hi2c, uint8_t TransferDirection, ui
     }
 }
 
-void generate_random_gps(const char* car)
-{
-	parking_message_t msg={0};
-
-	memset(&msg, 0, sizeof(msg));
-    strncpy(msg.vehicle_id, car,sizeof(msg.vehicle_id) - 1);
-
-    msg.lat = ((float)rand() / (float)RAND_MAX) * 100.0f;
-    msg.lon = ((float)rand() / (float)RAND_MAX) * 100.0f;
-
-    msg.is_parking = PARK_START;
-    msg.time = 0; //HAL_GetTick(); // or RTC time
-
-    if (osMessageQueuePut(msgQueueHandle, &msg, 0, 0) != osOK){
-    }
-    osDelay(1000 + rand() % 19901);
-    msg.is_parking = PARK_END;
-    if (osMessageQueuePut(msgQueueHandle, &msg, 0, 0) != osOK){
-    }
-}
+//void generate_random_gps(const char* car)
+//{
+//	parking_message_t msg={0};
+//
+//	memset(&msg, 0, sizeof(msg));
+////    strncpy(msg.vehicle_id, car,sizeof(msg.vehicle_id) - 1);
+//
+//	// Generate a random car number between 0 and 999
+//	int random_num = rand() % 1000;
+//
+//	// Format the string: "CAR" + 3-digit number with leading zeros
+//	snprintf(msg.vehicle_id, sizeof(msg.vehicle_id), "CAR%03d", random_num);
+//
+//    msg.lat = ((float)rand() / (float)RAND_MAX) * 100.0f;
+//    msg.lon = ((float)rand() / (float)RAND_MAX) * 100.0f;
+//
+//    msg.is_parking = PARK_START;
+//    msg.time = 0; //HAL_GetTick(); // or RTC time
+//
+//    if (osMessageQueuePut(msgQueueHandle, &msg, 0, 0) != osOK){
+//    }
+//    osDelay(1000 + rand() % 19901);
+//    msg.is_parking = PARK_END;
+//    if (osMessageQueuePut(msgQueueHandle, &msg, 0, 0) != osOK){
+//    }
+//}
 
 int __io_putchar(int ch)
 {
@@ -558,28 +575,39 @@ void StartGPSGenTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
 	printf("GPS generator starts\r\n");
-	// Set initial "No Data" state
-	memset(&tx_msg, 0, sizeof(tx_msg));
-	tx_msg.is_parking = -1;
-	generate_random_gps("CAR001");
-//	osDelay(100 + rand()%1900);
-	generate_random_gps("CAR002");
-//	osDelay(100 + rand()%1900);
-	generate_random_gps("CAR003");
+//	generate_random_gps("CAR001");
+////	osDelay(100 + rand()%1900);
+//	generate_random_gps("CAR002");
+////	osDelay(100 + rand()%1900);
+//	generate_random_gps("CAR003");
 //	osDelay(100 + rand()%1900);
 
   /* Infinite loop */
   for(;;)
   {
-	if (!tx_ready || tx_msg.is_parking == -1) {
-		if (osMessageQueueGet(msgQueueHandle, &tx_msg, NULL, 0) != osOK) {
-			memset(&tx_msg, 0, sizeof(tx_msg));
-			tx_msg.is_parking = -1;
-		}
-		tx_ready = 1;
-	}
+	parking_message_t msg={0};
 
-	osDelay(100); // Give 100ms to other tasks and the system
+	memset(&msg, 0, sizeof(msg));
+	// strncpy(msg.vehicle_id, car,sizeof(msg.vehicle_id) - 1);
+
+	// Generate a random car number between 0 and 999
+	int random_num = rand() % 1000;
+
+	// Format the string: "CAR" + 3-digit number with leading zeros
+	snprintf(msg.vehicle_id, sizeof(msg.vehicle_id), "CAR%03d", random_num);
+
+	msg.lat = ((float)rand() / (float)RAND_MAX) * 100.0f;
+	msg.lon = ((float)rand() / (float)RAND_MAX) * 100.0f;
+
+	msg.is_parking = PARK_START;
+	msg.time = 0; //HAL_GetTick(); // or RTC time
+
+	if (osMessageQueuePut(msgQueueHandle, &msg, 0, 0) != osOK){
+	}
+	osDelay(1000 + rand() % 19901);
+	msg.is_parking = PARK_END;
+	if (osMessageQueuePut(msgQueueHandle, &msg, 0, 0) != osOK){
+	}
 
   }
   /* USER CODE END 5 */
@@ -602,6 +630,34 @@ void blinking_led(void *argument)
 	osDelay(1000);
   }
   /* USER CODE END blinking_led */
+}
+
+/* USER CODE BEGIN Header_get_from_queue */
+/**
+* @brief Function implementing the myTask03 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_get_from_queue */
+void get_from_queue(void *argument)
+{
+  /* USER CODE BEGIN get_from_queue */
+	// Set initial "No Data" state
+	memset(&tx_msg, 0, sizeof(tx_msg));
+	tx_msg.is_parking = -1;
+  /* Infinite loop */
+  for(;;)
+  {
+	if (!tx_ready || tx_msg.is_parking == -1) {
+		if (osMessageQueueGet(msgQueueHandle, &tx_msg, NULL, 0) != osOK) {
+			memset(&tx_msg, 0, sizeof(tx_msg));
+			tx_msg.is_parking = -1;
+		}
+		tx_ready = 1;
+	}
+	osDelay(100); // Give 100ms to other tasks and the system
+  /* USER CODE END get_from_queue */
+  }
 }
 
 /**
