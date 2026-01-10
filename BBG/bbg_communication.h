@@ -24,5 +24,6 @@ int connect_to_server(const char *ip, int port);
 int init_i2c(const char *bus, int addr);
 ssize_t read_i2c_message(int fd, parking_message_t *msg);
 int send_to_server(int sock, const parking_message_t *msg);
+void log_event(const char *message);
 
 #endif // BG_COMMUNICATION_H

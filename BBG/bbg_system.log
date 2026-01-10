@@ -1,0 +1,1508 @@
+[Sun Jan  4 02:16:57 2026] Config Loaded: Server 192.168.7.1:8080, I2C /dev/i2c-2 (Addr: 0x10)
+[Sun Jan  4 02:16:57 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:16:57 2026] I2C initialized: bus=/dev/i2c-2, addr=0x10
+[Sun Jan  4 02:16:57 2026] Received I2C: ID=CAR308, Lat=18.293098, Lon=14.078911, Park=1
+[Sun Jan  4 02:16:57 2026] msg Sent to server successfully
+[Sun Jan  4 02:16:57 2026] Received I2C: ID=CAR710, Lat=8.519150, Lon=30.108252, Park=1
+[Sun Jan  4 02:16:57 2026] msg Sent to server successfully
+[Sun Jan  4 02:16:58 2026] Received I2C: ID=CAR508, Lat=91.089905, Lon=11.744883, Park=1
+[Sun Jan  4 02:16:58 2026] msg Sent to server successfully
+[Sun Jan  4 02:16:58 2026] Received I2C: ID=CAR866, Lat=23.023258, Lon=88.014999, Park=1
+[Sun Jan  4 02:16:58 2026] msg Sent to server successfully
+[Sun Jan  4 02:16:59 2026] Received I2C: ID=CAR308, Lat=18.293098, Lon=14.078911, Park=0
+[Sun Jan  4 02:16:59 2026] msg Sent to server successfully
+[Sun Jan  4 02:16:59 2026] Received I2C: ID=CAR480, Lat=61.035843, Lon=67.240738, Park=1
+[Sun Jan  4 02:16:59 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:00 2026] Received I2C: ID=CAR508, Lat=91.089905, Lon=11.744883, Park=0
+[Sun Jan  4 02:17:00 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:00 2026] Received I2C: ID=CAR124, Lat=63.072849, Lon=15.710420, Park=1
+[Sun Jan  4 02:17:00 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:01 2026] Received I2C: ID=CAR710, Lat=8.519150, Lon=30.108252, Park=0
+[Sun Jan  4 02:17:01 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:01 2026] Received I2C: ID=CAR591, Lat=9.340908, Lon=73.582199, Park=1
+[Sun Jan  4 02:17:01 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:02 2026] Received I2C: ID=CAR866, Lat=23.023258, Lon=88.014999, Park=0
+[Sun Jan  4 02:17:02 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:02 2026] Received I2C: ID=CAR385, Lat=74.870392, Lon=12.499905, Park=1
+[Sun Jan  4 02:17:02 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:03 2026] Received I2C: ID=CAR480, Lat=61.035843, Lon=67.240738, Park=0
+[Sun Jan  4 02:17:03 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:03 2026] Received I2C: ID=CAR046, Lat=92.035004, Lon=55.479961, Park=1
+[Sun Jan  4 02:17:03 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:04 2026] Received I2C: ID=CAR591, Lat=9.340908, Lon=73.582199, Park=0
+[Sun Jan  4 02:17:04 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:04 2026] Received I2C: ID=CAR124, Lat=63.072849, Lon=15.710420, Park=0
+[Sun Jan  4 02:17:04 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:05 2026] Received I2C: ID=CAR780, Lat=91.015625, Lon=31.417986, Park=1
+[Sun Jan  4 02:17:05 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:05 2026] Received I2C: ID=CAR952, Lat=14.175455, Lon=32.720585, Park=1
+[Sun Jan  4 02:17:05 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:06 2026] Received I2C: ID=CAR385, Lat=74.870392, Lon=12.499905, Park=0
+[Sun Jan  4 02:17:06 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:06 2026] Received I2C: ID=CAR447, Lat=30.345413, Lon=8.812926, Park=1
+[Sun Jan  4 02:17:06 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:07 2026] Received I2C: ID=CAR330, Lat=34.660522, Lon=60.810192, Park=1
+[Sun Jan  4 02:17:07 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:07 2026] Received I2C: ID=CAR461, Lat=19.645615, Lon=88.784981, Park=1
+[Sun Jan  4 02:17:07 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:08 2026] Received I2C: ID=CAR046, Lat=92.035004, Lon=55.479961, Park=0
+[Sun Jan  4 02:17:08 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:08 2026] Received I2C: ID=CAR560, Lat=57.218964, Lon=95.592720, Park=1
+[Sun Jan  4 02:17:08 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:09 2026] Received I2C: ID=CAR780, Lat=91.015625, Lon=31.417986, Park=0
+[Sun Jan  4 02:17:09 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:10 2026] Received I2C: ID=CAR797, Lat=93.164223, Lon=57.358021, Park=1
+[Sun Jan  4 02:17:10 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:10 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:17:13 2026] Received I2C: ID=CAR952, Lat=14.175455, Lon=32.720585, Park=0
+[Sun Jan  4 02:17:13 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:13 2026] Received I2C: ID=CAR777, Lat=66.209213, Lon=49.028851, Park=1
+[Sun Jan  4 02:17:13 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:14 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:17:16 2026] Received I2C: ID=CAR447, Lat=30.345413, Lon=8.812926, Park=0
+[Sun Jan  4 02:17:16 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:17 2026] Received I2C: ID=CAR508, Lat=97.505913, Lon=70.179962, Park=1
+[Sun Jan  4 02:17:17 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:17 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:17:20 2026] Received I2C: ID=CAR461, Lat=19.645615, Lon=88.784981, Park=0
+[Sun Jan  4 02:17:20 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:20 2026] Received I2C: ID=CAR330, Lat=34.660522, Lon=60.810192, Park=0
+[Sun Jan  4 02:17:20 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:21 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:17:23 2026] Received I2C: ID=CAR018, Lat=72.071785, Lon=25.558018, Park=1
+[Sun Jan  4 02:17:23 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:24 2026] Received I2C: ID=CAR777, Lat=66.209213, Lon=49.028851, Park=0
+[Sun Jan  4 02:17:24 2026] msg Sent to server successfully
+[Sun Jan  4 02:17:24 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:17:26 2026] Exiting gracefully...
+[Sun Jan  4 02:17:26 2026] Exiting gracefully...
+[Sun Jan  4 02:17:26 2026] 
+Program Terminated.
+
+[Sun Jan  4 02:28:45 2026] Config Loaded: Server 192.168.7.1:8080, I2C /dev/i2c-2 (Addr: 0x10)
+[Sun Jan  4 02:28:45 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:28:45 2026] I2C initialized: bus=/dev/i2c-2, addr=0x10
+[Sun Jan  4 02:28:45 2026] Received I2C: ID=CAR560, Lat=57.218964, Lon=95.592720, Park=0
+[Sun Jan  4 02:28:45 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:46 2026] Received I2C: ID=CAR032, Lat=76.549095, Lon=30.501160, Park=1
+[Sun Jan  4 02:28:46 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:46 2026] Received I2C: ID=CAR508, Lat=97.505913, Lon=70.179962, Park=0
+[Sun Jan  4 02:28:46 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:47 2026] Received I2C: ID=CAR797, Lat=93.164223, Lon=57.358021, Park=0
+[Sun Jan  4 02:28:47 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:47 2026] Received I2C: ID=CAR126, Lat=67.169472, Lon=53.573479, Park=1
+[Sun Jan  4 02:28:47 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:48 2026] Received I2C: ID=CAR379, Lat=48.655998, Lon=52.816147, Park=1
+[Sun Jan  4 02:28:48 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:48 2026] Received I2C: ID=CAR032, Lat=76.549095, Lon=30.501160, Park=0
+[Sun Jan  4 02:28:48 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:49 2026] Received I2C: ID=CAR018, Lat=72.071785, Lon=25.558018, Park=0
+[Sun Jan  4 02:28:49 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:49 2026] Received I2C: ID=CAR862, Lat=5.072390, Lon=90.293518, Park=1
+[Sun Jan  4 02:28:49 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:50 2026] Received I2C: ID=CAR239, Lat=25.454807, Lon=72.873535, Park=1
+[Sun Jan  4 02:28:50 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:50 2026] Received I2C: ID=CAR126, Lat=67.169472, Lon=53.573479, Park=0
+[Sun Jan  4 02:28:50 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:51 2026] Received I2C: ID=CAR379, Lat=48.655998, Lon=52.816147, Park=0
+[Sun Jan  4 02:28:51 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:51 2026] Received I2C: ID=CAR285, Lat=93.938271, Lon=35.530453, Park=1
+[Sun Jan  4 02:28:51 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:52 2026] Received I2C: ID=CAR862, Lat=5.072390, Lon=90.293518, Park=0
+[Sun Jan  4 02:28:52 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:52 2026] Received I2C: ID=CAR911, Lat=32.197701, Lon=51.491959, Park=1
+[Sun Jan  4 02:28:52 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:53 2026] Received I2C: ID=CAR967, Lat=90.306793, Lon=98.778824, Park=1
+[Sun Jan  4 02:28:53 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:53 2026] Received I2C: ID=CAR239, Lat=25.454807, Lon=72.873535, Park=0
+[Sun Jan  4 02:28:53 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:54 2026] Received I2C: ID=CAR228, Lat=85.880516, Lon=90.603355, Park=1
+[Sun Jan  4 02:28:54 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:54 2026] Received I2C: ID=CAR315, Lat=32.015690, Lon=70.695793, Park=1
+[Sun Jan  4 02:28:54 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:55 2026] Received I2C: ID=CAR285, Lat=93.938271, Lon=35.530453, Park=0
+[Sun Jan  4 02:28:55 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:55 2026] Received I2C: ID=CAR603, Lat=89.965683, Lon=0.495132, Park=1
+[Sun Jan  4 02:28:55 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:56 2026] Received I2C: ID=CAR911, Lat=32.197701, Lon=51.491959, Park=0
+[Sun Jan  4 02:28:56 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:56 2026] Received I2C: ID=CAR228, Lat=85.880516, Lon=90.603355, Park=0
+[Sun Jan  4 02:28:56 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:57 2026] Received I2C: ID=CAR967, Lat=90.306793, Lon=98.778824, Park=0
+[Sun Jan  4 02:28:57 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:57 2026] Received I2C: ID=CAR867, Lat=4.413924, Lon=72.626625, Park=1
+[Sun Jan  4 02:28:57 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:58 2026] Received I2C: ID=CAR859, Lat=15.849967, Lon=69.512260, Park=1
+[Sun Jan  4 02:28:58 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:58 2026] Received I2C: ID=CAR061, Lat=68.543159, Lon=71.078163, Park=1
+[Sun Jan  4 02:28:58 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:59 2026] Received I2C: ID=CAR603, Lat=89.965683, Lon=0.495132, Park=0
+[Sun Jan  4 02:28:59 2026] msg Sent to server successfully
+[Sun Jan  4 02:28:59 2026] Received I2C: ID=CAR315, Lat=32.015690, Lon=70.695793, Park=0
+[Sun Jan  4 02:28:59 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:00 2026] Received I2C: ID=CAR777, Lat=16.359789, Lon=44.911694, Park=1
+[Sun Jan  4 02:29:00 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:00 2026] Received I2C: ID=CAR859, Lat=15.849967, Lon=69.512260, Park=0
+[Sun Jan  4 02:29:00 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:01 2026] Received I2C: ID=CAR856, Lat=20.896921, Lon=63.620983, Park=1
+[Sun Jan  4 02:29:01 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:02 2026] Received I2C: ID=CAR061, Lat=68.543159, Lon=71.078163, Park=0
+[Sun Jan  4 02:29:02 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:02 2026] Received I2C: ID=CAR827, Lat=35.638599, Lon=35.142838, Park=1
+[Sun Jan  4 02:29:02 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:03 2026] Received I2C: ID=CAR867, Lat=4.413924, Lon=72.626625, Park=0
+[Sun Jan  4 02:29:03 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:03 2026] Received I2C: ID=CAR334, Lat=2.500842, Lon=9.558397, Park=1
+[Sun Jan  4 02:29:03 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:04 2026] Received I2C: ID=CAR777, Lat=16.359789, Lon=44.911694, Park=0
+[Sun Jan  4 02:29:04 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:04 2026] Received I2C: ID=CAR110, Lat=19.689951, Lon=68.548042, Park=1
+[Sun Jan  4 02:29:04 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:05 2026] Received I2C: ID=CAR543, Lat=26.356161, Lon=43.457184, Park=1
+[Sun Jan  4 02:29:05 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:05 2026] Received I2C: ID=CAR856, Lat=20.896921, Lon=63.620983, Park=0
+[Sun Jan  4 02:29:05 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:06 2026] Received I2C: ID=CAR334, Lat=2.500842, Lon=9.558397, Park=0
+[Sun Jan  4 02:29:06 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:06 2026] Received I2C: ID=CAR851, Lat=38.085918, Lon=84.679947, Park=1
+[Sun Jan  4 02:29:06 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:07 2026] Received I2C: ID=CAR827, Lat=35.638599, Lon=35.142838, Park=0
+[Sun Jan  4 02:29:07 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:07 2026] Received I2C: ID=CAR012, Lat=59.810101, Lon=16.953226, Park=1
+[Sun Jan  4 02:29:07 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:08 2026] Received I2C: ID=CAR110, Lat=19.689951, Lon=68.548042, Park=0
+[Sun Jan  4 02:29:08 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:08 2026] Received I2C: ID=CAR801, Lat=85.999374, Lon=34.193047, Park=1
+[Sun Jan  4 02:29:08 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:09 2026] Received I2C: ID=CAR561, Lat=34.185089, Lon=87.205559, Park=1
+[Sun Jan  4 02:29:09 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:09 2026] Received I2C: ID=CAR012, Lat=59.810101, Lon=16.953226, Park=0
+[Sun Jan  4 02:29:09 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:10 2026] Received I2C: ID=CAR284, Lat=45.229904, Lon=46.764355, Park=1
+[Sun Jan  4 02:29:10 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:10 2026] Received I2C: ID=CAR543, Lat=26.356161, Lon=43.457184, Park=0
+[Sun Jan  4 02:29:10 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:11 2026] Received I2C: ID=CAR801, Lat=85.999374, Lon=34.193047, Park=0
+[Sun Jan  4 02:29:11 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:11 2026] Received I2C: ID=CAR892, Lat=93.562271, Lon=26.814751, Park=1
+[Sun Jan  4 02:29:11 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:12 2026] Received I2C: ID=CAR414, Lat=61.984974, Lon=52.216148, Park=1
+[Sun Jan  4 02:29:12 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:12 2026] Received I2C: ID=CAR743, Lat=6.085237, Lon=72.922783, Park=0
+[Sun Jan  4 02:29:12 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:13 2026] Received I2C: ID=CAR728, Lat=46.930115, Lon=38.279991, Park=0
+[Sun Jan  4 02:29:13 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:13 2026] System-wide shutdown initiated by Parent...
+[Sun Jan  4 02:29:13 2026] Program Terminated.
+
+[Sun Jan  4 02:29:53 2026] Config Loaded: Server 192.168.7.1:8080, I2C /dev/i2c-2 (Addr: 0x10)
+[Sun Jan  4 02:29:53 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:29:53 2026] I2C initialized: bus=/dev/i2c-2, addr=0x10
+[Sun Jan  4 02:29:53 2026] Received I2C: ID=CAR125, Lat=83.053680, Lon=37.523293, Park=1
+[Sun Jan  4 02:29:53 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:53 2026] Received I2C: ID=CAR722, Lat=7.459799, Lon=34.414700, Park=0
+[Sun Jan  4 02:29:53 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:54 2026] Received I2C: ID=CAR584, Lat=75.217094, Lon=96.900673, Park=1
+[Sun Jan  4 02:29:54 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:54 2026] Received I2C: ID=CAR256, Lat=97.313141, Lon=74.966095, Park=1
+[Sun Jan  4 02:29:54 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:55 2026] Received I2C: ID=CAR868, Lat=4.235368, Lon=58.305794, Park=1
+[Sun Jan  4 02:29:55 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:55 2026] Received I2C: ID=CAR892, Lat=93.562271, Lon=26.814751, Park=0
+[Sun Jan  4 02:29:55 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:56 2026] Received I2C: ID=CAR414, Lat=61.984974, Lon=52.216148, Park=0
+[Sun Jan  4 02:29:56 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:56 2026] Received I2C: ID=CAR125, Lat=83.053680, Lon=37.523293, Park=0
+[Sun Jan  4 02:29:56 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:57 2026] Received I2C: ID=CAR303, Lat=24.894636, Lon=10.955104, Park=1
+[Sun Jan  4 02:29:57 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:57 2026] Received I2C: ID=CAR584, Lat=75.217094, Lon=96.900673, Park=0
+[Sun Jan  4 02:29:57 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:58 2026] Received I2C: ID=CAR559, Lat=82.161011, Lon=89.648788, Park=1
+[Sun Jan  4 02:29:58 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:58 2026] Received I2C: ID=CAR335, Lat=5.166638, Lon=63.225037, Park=1
+[Sun Jan  4 02:29:58 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:59 2026] Received I2C: ID=CAR303, Lat=24.894636, Lon=10.955104, Park=0
+[Sun Jan  4 02:29:59 2026] msg Sent to server successfully
+[Sun Jan  4 02:29:59 2026] Received I2C: ID=CAR449, Lat=63.233070, Lon=14.546310, Park=1
+[Sun Jan  4 02:29:59 2026] msg Sent to server successfully
+[Sun Jan  4 02:30:00 2026] Received I2C: ID=CAR256, Lat=97.313141, Lon=74.966095, Park=0
+[Sun Jan  4 02:30:00 2026] msg Sent to server successfully
+[Sun Jan  4 02:30:00 2026] Received I2C: ID=CAR062, Lat=55.545540, Lon=81.670937, Park=1
+[Sun Jan  4 02:30:01 2026] Received I2C: ID=CAR868, Lat=4.235368, Lon=58.305794, Park=0
+[Sun Jan  4 02:39:16 2026] Config Loaded: Server 192.168.7.1:8080, I2C /dev/i2c-2 (Addr: 0x10)
+[Sun Jan  4 02:39:16 2026] I2C initialized: bus=/dev/i2c-2, addr=0x10
+[Sun Jan  4 02:39:16 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:39:16 2026] Received I2C: ID=CAR475, Lat=71.235397, Lon=58.814007, Park=1
+[Sun Jan  4 02:39:16 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:16 2026] Received I2C: ID=CAR449, Lat=63.233070, Lon=14.546310, Park=0
+[Sun Jan  4 02:39:16 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:17 2026] Received I2C: ID=CAR738, Lat=17.067259, Lon=42.204659, Park=1
+[Sun Jan  4 02:39:17 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:17 2026] Received I2C: ID=CAR559, Lat=82.161011, Lon=89.648788, Park=0
+[Sun Jan  4 02:39:17 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:18 2026] Received I2C: ID=CAR335, Lat=5.166638, Lon=63.225037, Park=0
+[Sun Jan  4 02:39:18 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:18 2026] Received I2C: ID=CAR992, Lat=30.895731, Lon=97.091278, Park=1
+[Sun Jan  4 02:39:18 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:19 2026] Received I2C: ID=CAR475, Lat=71.235397, Lon=58.814007, Park=0
+[Sun Jan  4 02:39:19 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:19 2026] Received I2C: ID=CAR081, Lat=84.301445, Lon=70.970154, Park=1
+[Sun Jan  4 02:39:19 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:20 2026] Received I2C: ID=CAR738, Lat=17.067259, Lon=42.204659, Park=0
+[Sun Jan  4 02:39:20 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:20 2026] Received I2C: ID=CAR062, Lat=55.545540, Lon=81.670937, Park=0
+[Sun Jan  4 02:39:20 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:21 2026] Received I2C: ID=CAR873, Lat=56.534256, Lon=3.455409, Park=1
+[Sun Jan  4 02:39:21 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:21 2026] Received I2C: ID=CAR992, Lat=30.895731, Lon=97.091278, Park=0
+[Sun Jan  4 02:39:21 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:22 2026] Received I2C: ID=CAR864, Lat=25.977028, Lon=95.114769, Park=1
+[Sun Jan  4 02:39:22 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:22 2026] Received I2C: ID=CAR116, Lat=16.746712, Lon=89.605156, Park=1
+[Sun Jan  4 02:39:22 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:23 2026] Received I2C: ID=CAR927, Lat=68.642639, Lon=5.817906, Park=1
+[Sun Jan  4 02:39:23 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:23 2026] Received I2C: ID=CAR081, Lat=84.301445, Lon=70.970154, Park=0
+[Sun Jan  4 02:39:23 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:24 2026] Received I2C: ID=CAR873, Lat=56.534256, Lon=3.455409, Park=0
+[Sun Jan  4 02:39:24 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:24 2026] Received I2C: ID=CAR389, Lat=78.970413, Lon=17.190546, Park=1
+[Sun Jan  4 02:39:24 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:25 2026] Received I2C: ID=CAR864, Lat=25.977028, Lon=95.114769, Park=0
+[Sun Jan  4 02:39:25 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:25 2026] Received I2C: ID=CAR489, Lat=39.869144, Lon=38.094734, Park=1
+[Sun Jan  4 02:39:25 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:26 2026] Received I2C: ID=CAR066, Lat=57.316822, Lon=65.776337, Park=1
+[Sun Jan  4 02:39:26 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:26 2026] Received I2C: ID=CAR927, Lat=68.642639, Lon=5.817906, Park=0
+[Sun Jan  4 02:39:26 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:27 2026] Received I2C: ID=CAR698, Lat=10.580085, Lon=19.517927, Park=1
+[Sun Jan  4 02:39:27 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:27 2026] Received I2C: ID=CAR389, Lat=78.970413, Lon=17.190546, Park=0
+[Sun Jan  4 02:39:27 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:28 2026] Received I2C: ID=CAR116, Lat=16.746712, Lon=89.605156, Park=0
+[Sun Jan  4 02:39:28 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:28 2026] Received I2C: ID=CAR474, Lat=61.445034, Lon=24.004553, Park=1
+[Sun Jan  4 02:39:28 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:29 2026] Received I2C: ID=CAR273, Lat=98.637566, Lon=36.536541, Park=1
+[Sun Jan  4 02:39:29 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:29 2026] Received I2C: ID=CAR066, Lat=57.316822, Lon=65.776337, Park=0
+[Sun Jan  4 02:39:29 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:30 2026] Received I2C: ID=CAR489, Lat=39.869144, Lon=38.094734, Park=0
+[Sun Jan  4 02:39:30 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:30 2026] Received I2C: ID=CAR764, Lat=42.219173, Lon=48.312027, Park=1
+[Sun Jan  4 02:39:30 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:31 2026] Received I2C: ID=CAR474, Lat=61.445034, Lon=24.004553, Park=0
+[Sun Jan  4 02:39:31 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:31 2026] Received I2C: ID=CAR731, Lat=30.161465, Lon=87.600395, Park=1
+[Sun Jan  4 02:39:31 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:32 2026] Received I2C: ID=CAR698, Lat=10.580085, Lon=19.517927, Park=0
+[Sun Jan  4 02:39:32 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:32 2026] Received I2C: ID=CAR273, Lat=98.637566, Lon=36.536541, Park=0
+[Sun Jan  4 02:39:32 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:33 2026] Received I2C: ID=CAR106, Lat=90.376190, Lon=85.274239, Park=1
+[Sun Jan  4 02:39:33 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:33 2026] Received I2C: ID=CAR764, Lat=42.219173, Lon=48.312027, Park=0
+[Sun Jan  4 02:39:33 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:34 2026] Received I2C: ID=CAR613, Lat=77.216759, Lon=1.258777, Park=1
+[Sun Jan  4 02:39:34 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:34 2026] Received I2C: ID=CAR939, Lat=98.456734, Lon=33.544491, Park=1
+[Sun Jan  4 02:39:34 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:35 2026] Received I2C: ID=CAR814, Lat=91.992813, Lon=82.961906, Park=1
+[Sun Jan  4 02:39:35 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:35 2026] Received I2C: ID=CAR731, Lat=30.161465, Lon=87.600395, Park=0
+[Sun Jan  4 02:39:35 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:36 2026] Received I2C: ID=CAR297, Lat=88.812202, Lon=36.110817, Park=1
+[Sun Jan  4 02:39:36 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:36 2026] Received I2C: ID=CAR613, Lat=77.216759, Lon=1.258777, Park=0
+[Sun Jan  4 02:39:36 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:37 2026] Received I2C: ID=CAR232, Lat=17.346464, Lon=62.726856, Park=1
+[Sun Jan  4 02:39:37 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:37 2026] Received I2C: ID=CAR106, Lat=90.376190, Lon=85.274239, Park=0
+[Sun Jan  4 02:39:37 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:38 2026] Received I2C: ID=CAR021, Lat=22.427975, Lon=87.669449, Park=1
+[Sun Jan  4 02:39:38 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:38 2026] Received I2C: ID=CAR297, Lat=88.812202, Lon=36.110817, Park=0
+[Sun Jan  4 02:39:38 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:39 2026] Received I2C: ID=CAR928, Lat=9.793910, Lon=85.889832, Park=1
+[Sun Jan  4 02:39:39 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:39 2026] Received I2C: ID=CAR939, Lat=98.456734, Lon=33.544491, Park=0
+[Sun Jan  4 02:39:39 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:40 2026] Received I2C: ID=CAR074, Lat=73.142799, Lon=81.948532, Park=1
+[Sun Jan  4 02:39:40 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:40 2026] Received I2C: ID=CAR814, Lat=91.992813, Lon=82.961906, Park=0
+[Sun Jan  4 02:39:40 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:41 2026] Received I2C: ID=CAR040, Lat=33.070644, Lon=86.464577, Park=1
+[Sun Jan  4 02:39:41 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:41 2026] Received I2C: ID=CAR333, Lat=77.728065, Lon=70.828934, Park=1
+[Sun Jan  4 02:39:41 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:42 2026] Received I2C: ID=CAR306, Lat=56.972591, Lon=66.408646, Park=0
+[Sun Jan  4 02:39:42 2026] sending to server failed
+[Sun Jan  4 02:39:42 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:39:42 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:39:42 2026] Received I2C: ID=CAR258, Lat=66.456474, Lon=42.460728, Park=0
+[Sun Jan  4 02:39:42 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:43 2026] Received I2C: ID=CAR924, Lat=87.175079, Lon=94.545944, Park=0
+[Sun Jan  4 02:39:43 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:43 2026] Received I2C: ID=CAR543, Lat=36.401390, Lon=68.122574, Park=1
+[Sun Jan  4 02:39:43 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:44 2026] Received I2C: ID=CAR247, Lat=18.878969, Lon=63.098167, Park=1
+[Sun Jan  4 02:39:44 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:45 2026] Received I2C: ID=CAR602, Lat=11.497076, Lon=44.220005, Park=1
+[Sun Jan  4 02:39:45 2026] sending to server failed
+[Sun Jan  4 02:39:45 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:39:45 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:39:45 2026] Received I2C: ID=CAR543, Lat=36.401390, Lon=68.122574, Park=0
+[Sun Jan  4 02:39:45 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:46 2026] Received I2C: ID=CAR802, Lat=62.094372, Lon=52.476288, Park=1
+[Sun Jan  4 02:39:46 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:46 2026] Received I2C: ID=CAR014, Lat=8.760760, Lon=53.185928, Park=0
+[Sun Jan  4 02:39:46 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:47 2026] Received I2C: ID=CAR333, Lat=77.728065, Lon=70.828934, Park=0
+[Sun Jan  4 02:39:47 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:47 2026] Received I2C: ID=CAR955, Lat=75.751892, Lon=23.746620, Park=1
+[Sun Jan  4 02:39:47 2026] sending to server failed
+[Sun Jan  4 02:39:47 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:39:47 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:39:48 2026] Received I2C: ID=CAR247, Lat=18.878969, Lon=63.098167, Park=0
+[Sun Jan  4 02:39:48 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:48 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:39:51 2026] Received I2C: ID=CAR061, Lat=23.218424, Lon=16.555662, Park=1
+[Sun Jan  4 02:39:51 2026] sending to server failed
+[Sun Jan  4 02:39:51 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:39:51 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:39:51 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:39:54 2026] Received I2C: ID=CAR602, Lat=11.497076, Lon=44.220005, Park=0
+[Sun Jan  4 02:39:54 2026] msg Sent to server successfully
+[Sun Jan  4 02:39:54 2026] Received I2C: ID=CAR295, Lat=31.777733, Lon=43.363216, Park=1
+[Sun Jan  4 02:39:54 2026] sending to server failed
+[Sun Jan  4 02:39:54 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:39:54 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:39:55 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:39:57 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:00 2026] Received I2C: ID=CAR640, Lat=94.932327, Lon=64.091881, Park=1
+[Sun Jan  4 02:40:00 2026] msg Sent to server successfully
+[Sun Jan  4 02:40:00 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:03 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:05 2026] Received I2C: ID=CAR953, Lat=36.888649, Lon=54.575859, Park=1
+[Sun Jan  4 02:40:05 2026] sending to server failed
+[Sun Jan  4 02:40:05 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:40:05 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:40:06 2026] Received I2C: ID=CAR802, Lat=62.094372, Lon=52.476288, Park=0
+[Sun Jan  4 02:40:06 2026] msg Sent to server successfully
+[Sun Jan  4 02:40:06 2026] Received I2C: ID=CAR955, Lat=75.751892, Lon=23.746620, Park=0
+[Sun Jan  4 02:40:06 2026] msg Sent to server successfully
+[Sun Jan  4 02:40:07 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:09 2026] Received I2C: ID=CAR061, Lat=23.218424, Lon=16.555662, Park=0
+[Sun Jan  4 02:40:09 2026] sending to server failed
+[Sun Jan  4 02:40:09 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:40:09 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:40:10 2026] Received I2C: ID=CAR228, Lat=49.165340, Lon=1.324452, Park=1
+[Sun Jan  4 02:40:10 2026] msg Sent to server successfully
+[Sun Jan  4 02:40:10 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:13 2026] Received I2C: ID=CAR640, Lat=94.932327, Lon=64.091881, Park=0
+[Sun Jan  4 02:40:13 2026] sending to server failed
+[Sun Jan  4 02:40:13 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:40:13 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:40:13 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:16 2026] Received I2C: ID=CAR451, Lat=37.736382, Lon=28.550949, Park=1
+[Sun Jan  4 02:40:16 2026] msg Sent to server successfully
+[Sun Jan  4 02:40:16 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:19 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:21 2026] Received I2C: ID=CAR295, Lat=31.777733, Lon=43.363216, Park=0
+[Sun Jan  4 02:40:21 2026] sending to server failed
+[Sun Jan  4 02:40:21 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:40:21 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:40:22 2026] Received I2C: ID=CAR542, Lat=23.898849, Lon=83.650703, Park=1
+[Sun Jan  4 02:40:22 2026] msg Sent to server successfully
+[Sun Jan  4 02:40:22 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:25 2026] Received I2C: ID=CAR560, Lat=97.612610, Lon=27.218613, Park=1
+[Sun Jan  4 02:40:25 2026] sending to server failed
+[Sun Jan  4 02:40:25 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:40:25 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:40:25 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:28 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:30 2026] Received I2C: ID=CAR953, Lat=36.888649, Lon=54.575859, Park=0
+[Sun Jan  4 02:40:30 2026] msg Sent to server successfully
+[Sun Jan  4 02:40:31 2026] Received I2C: ID=CAR451, Lat=37.736382, Lon=28.550949, Park=0
+[Sun Jan  4 02:40:31 2026] sending to server failed
+[Sun Jan  4 02:40:31 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:40:31 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:40:31 2026] Received I2C: ID=CAR540, Lat=42.893223, Lon=20.011257, Park=1
+[Sun Jan  4 02:40:31 2026] msg Sent to server successfully
+[Sun Jan  4 02:40:32 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:34 2026] Received I2C: ID=CAR397, Lat=62.343224, Lon=64.018318, Park=1
+[Sun Jan  4 02:40:34 2026] sending to server failed
+[Sun Jan  4 02:40:34 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:40:34 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:40:35 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:37 2026] Received I2C: ID=CAR228, Lat=49.165340, Lon=1.324452, Park=0
+[Sun Jan  4 02:40:37 2026] msg Sent to server successfully
+[Sun Jan  4 02:40:38 2026] Received I2C: ID=CAR560, Lat=97.612610, Lon=27.218613, Park=0
+[Sun Jan  4 02:40:38 2026] sending to server failed
+[Sun Jan  4 02:40:38 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 02:40:38 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 02:40:38 2026] No message. waiting 2 seconds...
+[Sun Jan  4 02:40:40 2026] System-wide shutdown initiated by Parent...
+[Sun Jan  4 02:40:40 2026] Program Terminated.
+
+[Sun Jan  4 03:03:41 2026] Config Loaded: Server 192.168.7.1:8080, I2C /dev/i2c-2 (Addr: 0x10)
+[Sun Jan  4 03:03:41 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:03:41 2026] I2C initialized: bus=/dev/i2c-2, addr=0x10
+[Sun Jan  4 03:03:41 2026] Received I2C: ID=CAR395, Lat=65.218224, Lon=87.194435, Park=1
+[Sun Jan  4 03:03:41 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:42 2026] Received I2C: ID=CAR542, Lat=23.898849, Lon=83.650703, Park=0
+[Sun Jan  4 03:03:42 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:42 2026] Received I2C: ID=CAR913, Lat=27.625999, Lon=18.506912, Park=1
+[Sun Jan  4 03:03:42 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:43 2026] Received I2C: ID=CAR705, Lat=18.995132, Lon=30.490726, Park=1
+[Sun Jan  4 03:03:43 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:43 2026] Received I2C: ID=CAR395, Lat=65.218224, Lon=87.194435, Park=0
+[Sun Jan  4 03:03:43 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:44 2026] Received I2C: ID=CAR927, Lat=78.013847, Lon=45.862724, Park=1
+[Sun Jan  4 03:03:44 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:44 2026] Received I2C: ID=CAR540, Lat=42.893223, Lon=20.011257, Park=0
+[Sun Jan  4 03:03:44 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:45 2026] Received I2C: ID=CAR913, Lat=27.625999, Lon=18.506912, Park=0
+[Sun Jan  4 03:03:45 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:45 2026] Received I2C: ID=CAR188, Lat=28.716560, Lon=54.178871, Park=1
+[Sun Jan  4 03:03:45 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:46 2026] Received I2C: ID=CAR397, Lat=62.343224, Lon=64.018318, Park=0
+[Sun Jan  4 03:03:46 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:46 2026] Received I2C: ID=CAR741, Lat=29.898252, Lon=51.568230, Park=1
+[Sun Jan  4 03:03:46 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:47 2026] Received I2C: ID=CAR681, Lat=81.366707, Lon=28.321589, Park=1
+[Sun Jan  4 03:03:47 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:47 2026] Received I2C: ID=CAR927, Lat=78.013847, Lon=45.862724, Park=0
+[Sun Jan  4 03:03:47 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:48 2026] Received I2C: ID=CAR188, Lat=28.716560, Lon=54.178871, Park=0
+[Sun Jan  4 03:03:48 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:48 2026] Received I2C: ID=CAR363, Lat=60.831406, Lon=14.082501, Park=1
+[Sun Jan  4 03:03:48 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:49 2026] Received I2C: ID=CAR705, Lat=18.995132, Lon=30.490726, Park=0
+[Sun Jan  4 03:03:49 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:49 2026] Received I2C: ID=CAR755, Lat=93.878883, Lon=39.453789, Park=1
+[Sun Jan  4 03:03:49 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:50 2026] Received I2C: ID=CAR741, Lat=29.898252, Lon=51.568230, Park=0
+[Sun Jan  4 03:03:50 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:50 2026] Received I2C: ID=CAR456, Lat=18.896618, Lon=13.697550, Park=1
+[Sun Jan  4 03:03:50 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:51 2026] Received I2C: ID=CAR681, Lat=81.366707, Lon=28.321589, Park=0
+[Sun Jan  4 03:03:51 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:51 2026] Received I2C: ID=CAR966, Lat=82.762184, Lon=52.539970, Park=1
+[Sun Jan  4 03:03:51 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:52 2026] Received I2C: ID=CAR127, Lat=64.554291, Lon=26.689899, Park=1
+[Sun Jan  4 03:03:52 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:52 2026] Received I2C: ID=CAR222, Lat=96.367874, Lon=53.433830, Park=1
+[Sun Jan  4 03:03:52 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:53 2026] Received I2C: ID=CAR755, Lat=93.878883, Lon=39.453789, Park=0
+[Sun Jan  4 03:03:53 2026] sending to server failed
+[Sun Jan  4 03:03:53 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:03:53 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:03:53 2026] Received I2C: ID=CAR363, Lat=60.831406, Lon=14.082501, Park=0
+[Sun Jan  4 03:03:53 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:54 2026] Received I2C: ID=CAR966, Lat=82.762184, Lon=52.539970, Park=0
+[Sun Jan  4 03:03:54 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:54 2026] Received I2C: ID=CAR644, Lat=73.690758, Lon=50.491013, Park=1
+[Sun Jan  4 03:03:54 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:55 2026] Received I2C: ID=CAR456, Lat=18.896618, Lon=13.697550, Park=0
+[Sun Jan  4 03:03:55 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:55 2026] Received I2C: ID=CAR048, Lat=34.326752, Lon=75.532982, Park=1
+[Sun Jan  4 03:03:55 2026] sending to server failed
+[Sun Jan  4 03:03:55 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:03:55 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:03:56 2026] Received I2C: ID=CAR230, Lat=50.868954, Lon=69.923012, Park=1
+[Sun Jan  4 03:03:56 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:56 2026] Received I2C: ID=CAR549, Lat=34.839386, Lon=83.469688, Park=1
+[Sun Jan  4 03:03:56 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:57 2026] Received I2C: ID=CAR644, Lat=73.690758, Lon=50.491013, Park=0
+[Sun Jan  4 03:03:57 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:57 2026] Received I2C: ID=CAR127, Lat=64.554291, Lon=26.689899, Park=0
+[Sun Jan  4 03:03:57 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:58 2026] Received I2C: ID=CAR199, Lat=20.437973, Lon=74.826660, Park=1
+[Sun Jan  4 03:03:58 2026] sending to server failed
+[Sun Jan  4 03:03:58 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:03:58 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:03:58 2026] Received I2C: ID=CAR222, Lat=96.367874, Lon=53.433830, Park=0
+[Sun Jan  4 03:03:58 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:59 2026] Received I2C: ID=CAR048, Lat=34.326752, Lon=75.532982, Park=0
+[Sun Jan  4 03:03:59 2026] msg Sent to server successfully
+[Sun Jan  4 03:03:59 2026] Received I2C: ID=CAR329, Lat=72.873779, Lon=8.517107, Park=1
+[Sun Jan  4 03:03:59 2026] msg Sent to server successfully
+[Sun Jan  4 03:04:00 2026] Received I2C: ID=CAR962, Lat=34.522675, Lon=34.497879, Park=1
+[Sun Jan  4 03:04:00 2026] msg Sent to server successfully
+[Sun Jan  4 03:04:00 2026] Received I2C: ID=CAR230, Lat=50.868954, Lon=69.923012, Park=0
+[Sun Jan  4 03:04:00 2026] sending to server failed
+[Sun Jan  4 03:04:00 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:04:00 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:04:01 2026] Received I2C: ID=CAR314, Lat=43.393066, Lon=23.214590, Park=1
+[Sun Jan  4 03:04:01 2026] msg Sent to server successfully
+[Sun Jan  4 03:04:01 2026] Received I2C: ID=CAR545, Lat=87.078568, Lon=18.080540, Park=1
+[Sun Jan  4 03:04:01 2026] msg Sent to server successfully
+[Sun Jan  4 03:04:02 2026] Received I2C: ID=CAR199, Lat=20.437973, Lon=74.826660, Park=0
+[Sun Jan  4 03:04:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:04:02 2026] Received I2C: ID=CAR549, Lat=34.839386, Lon=83.469688, Park=0
+[Sun Jan  4 03:04:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:04:03 2026] Received I2C: ID=CAR962, Lat=34.522675, Lon=34.497879, Park=0
+[Sun Jan  4 03:04:03 2026] sending to server failed
+[Sun Jan  4 03:04:03 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:04:03 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:04:04 2026] Received I2C: ID=CAR140, Lat=36.185932, Lon=9.488721, Park=1
+[Sun Jan  4 03:04:04 2026] msg Sent to server successfully
+[Sun Jan  4 03:04:04 2026] Received I2C: ID=CAR329, Lat=72.873779, Lon=8.517107, Park=0
+[Sun Jan  4 03:04:04 2026] msg Sent to server successfully
+[Sun Jan  4 03:04:05 2026] Received I2C: ID=CAR206, Lat=21.911114, Lon=5.623821, Park=1
+[Sun Jan  4 03:04:05 2026] msg Sent to server successfully
+[Sun Jan  4 03:04:05 2026] Received I2C: ID=CAR314, Lat=43.393066, Lon=23.214590, Park=0
+[Sun Jan  4 03:04:05 2026] msg Sent to server successfully
+[Sun Jan  4 03:04:06 2026] Received I2C: ID=CAR205, Lat=67.482414, Lon=87.275093, Park=1
+[Sun Jan  4 03:04:06 2026] sending to server failed
+[Sun Jan  4 03:04:06 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:04:06 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:04:06 2026] Received I2C: ID=CAR140, Lat=36.185932, Lon=9.488721, Park=0
+[Sun Jan  4 03:04:06 2026] msg Sent to server successfully
+[Sun Jan  4 03:04:07 2026] Received I2C: ID=CAR476, Lat=55.095600, Lon=68.821037, Park=1
+[Sun Jan  4 03:04:07 2026] msg Sent to server successfully
+[Sun Jan  4 03:04:07 2026] System-wide shutdown initiated by Parent...
+[Sun Jan  4 03:04:07 2026] Program Terminated.
+
+[Sun Jan  4 03:06:47 2026] Config Loaded: Server 192.168.7.1:8080, I2C /dev/i2c-2 (Addr: 0x10)
+[Sun Jan  4 03:06:47 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:06:47 2026] I2C initialized: bus=/dev/i2c-2, addr=0x10
+[Sun Jan  4 03:06:47 2026] Received I2C: ID=CAR308, Lat=18.293098, Lon=14.078911, Park=1
+[Sun Jan  4 03:06:47 2026] msg Sent to server successfully
+[Sun Jan  4 03:06:48 2026] Received I2C: ID=CAR710, Lat=8.519150, Lon=30.108252, Park=1
+[Sun Jan  4 03:06:48 2026] msg Sent to server successfully
+[Sun Jan  4 03:06:48 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:06:51 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:06:53 2026] Received I2C: ID=CAR508, Lat=91.089905, Lon=11.744883, Park=1
+[Sun Jan  4 03:06:53 2026] msg Sent to server successfully
+[Sun Jan  4 03:06:54 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:06:56 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:06:59 2026] Received I2C: ID=CAR866, Lat=23.023258, Lon=88.014999, Park=1
+[Sun Jan  4 03:06:59 2026] msg Sent to server successfully
+[Sun Jan  4 03:06:59 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:07:02 2026] Received I2C: ID=CAR308, Lat=18.293098, Lon=14.078911, Park=0
+[Sun Jan  4 03:07:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:07:02 2026] Received I2C: ID=CAR480, Lat=61.035843, Lon=67.240738, Park=1
+[Sun Jan  4 03:07:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:07:03 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:07:05 2026] Received I2C: ID=CAR508, Lat=91.089905, Lon=11.744883, Park=0
+[Sun Jan  4 03:07:05 2026] msg Sent to server successfully
+[Sun Jan  4 03:07:06 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:07:08 2026] Received I2C: ID=CAR124, Lat=63.072849, Lon=15.710420, Park=1
+[Sun Jan  4 03:07:08 2026] msg Sent to server successfully
+[Sun Jan  4 03:07:09 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:07:11 2026] Received I2C: ID=CAR710, Lat=8.519150, Lon=30.108252, Park=0
+[Sun Jan  4 03:07:11 2026] sending to server failed
+[Sun Jan  4 03:07:11 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:07:11 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:07:12 2026] Received I2C: ID=CAR591, Lat=9.340908, Lon=73.582199, Park=1
+[Sun Jan  4 03:07:12 2026] msg Sent to server successfully
+[Sun Jan  4 03:07:12 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:07:14 2026] System-wide shutdown initiated by Parent...
+[Sun Jan  4 03:07:14 2026] Program Terminated.
+
+[Sun Jan  4 03:15:00 2026] Config Loaded: Server 192.168.7.1:8080, I2C /dev/i2c-2 (Addr: 0x10)
+[Sun Jan  4 03:15:00 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:15:00 2026] I2C initialized: bus=/dev/i2c-2, addr=0x10
+[Sun Jan  4 03:15:00 2026] Received I2C: ID=CAR866, Lat=23.023258, Lon=88.014999, Park=0
+[Sun Jan  4 03:15:00 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:00 2026] Received I2C: ID=CAR385, Lat=74.870392, Lon=12.499905, Park=1
+[Sun Jan  4 03:15:00 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:01 2026] Received I2C: ID=CAR480, Lat=61.035843, Lon=67.240738, Park=0
+[Sun Jan  4 03:15:01 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:01 2026] Received I2C: ID=CAR046, Lat=92.035004, Lon=55.479961, Park=1
+[Sun Jan  4 03:15:01 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:02 2026] Received I2C: ID=CAR591, Lat=9.340908, Lon=73.582199, Park=0
+[Sun Jan  4 03:15:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:02 2026] Received I2C: ID=CAR124, Lat=63.072849, Lon=15.710420, Park=0
+[Sun Jan  4 03:15:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:03 2026] Received I2C: ID=CAR780, Lat=91.015625, Lon=31.417986, Park=1
+[Sun Jan  4 03:15:03 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:03 2026] Received I2C: ID=CAR952, Lat=14.175455, Lon=32.720585, Park=1
+[Sun Jan  4 03:15:03 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:04 2026] Received I2C: ID=CAR385, Lat=74.870392, Lon=12.499905, Park=0
+[Sun Jan  4 03:15:04 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:04 2026] Received I2C: ID=CAR447, Lat=30.345413, Lon=8.812926, Park=1
+[Sun Jan  4 03:15:04 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:05 2026] Received I2C: ID=CAR330, Lat=34.660522, Lon=60.810192, Park=1
+[Sun Jan  4 03:15:05 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:05 2026] Received I2C: ID=CAR461, Lat=19.645615, Lon=88.784981, Park=1
+[Sun Jan  4 03:15:05 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:06 2026] Received I2C: ID=CAR046, Lat=92.035004, Lon=55.479961, Park=0
+[Sun Jan  4 03:15:06 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:06 2026] Received I2C: ID=CAR560, Lat=57.218964, Lon=95.592720, Park=1
+[Sun Jan  4 03:15:06 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:07 2026] Received I2C: ID=CAR780, Lat=91.015625, Lon=31.417986, Park=0
+[Sun Jan  4 03:15:07 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:07 2026] Received I2C: ID=CAR797, Lat=93.164223, Lon=57.358021, Park=1
+[Sun Jan  4 03:15:07 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:08 2026] Received I2C: ID=CAR952, Lat=14.175455, Lon=32.720585, Park=0
+[Sun Jan  4 03:15:08 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:08 2026] Received I2C: ID=CAR777, Lat=66.209213, Lon=49.028851, Park=1
+[Sun Jan  4 03:15:08 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:09 2026] Received I2C: ID=CAR447, Lat=30.345413, Lon=8.812926, Park=0
+[Sun Jan  4 03:15:09 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:09 2026] Received I2C: ID=CAR508, Lat=97.505913, Lon=70.179962, Park=1
+[Sun Jan  4 03:15:09 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:10 2026] Received I2C: ID=CAR461, Lat=19.645615, Lon=88.784981, Park=0
+[Sun Jan  4 03:15:10 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:10 2026] Received I2C: ID=CAR330, Lat=34.660522, Lon=60.810192, Park=0
+[Sun Jan  4 03:15:10 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:11 2026] Received I2C: ID=CAR018, Lat=72.071785, Lon=25.558018, Park=1
+[Sun Jan  4 03:15:11 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:11 2026] Received I2C: ID=CAR777, Lat=66.209213, Lon=49.028851, Park=0
+[Sun Jan  4 03:15:11 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:12 2026] Received I2C: ID=CAR560, Lat=57.218964, Lon=95.592720, Park=0
+[Sun Jan  4 03:15:12 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:12 2026] Received I2C: ID=CAR032, Lat=76.549095, Lon=30.501160, Park=1
+[Sun Jan  4 03:15:12 2026] sending to server failed
+[Sun Jan  4 03:15:12 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:15:12 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:15:13 2026] Received I2C: ID=CAR508, Lat=97.505913, Lon=70.179962, Park=0
+[Sun Jan  4 03:15:13 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:13 2026] Received I2C: ID=CAR797, Lat=93.164223, Lon=57.358021, Park=0
+[Sun Jan  4 03:15:13 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:14 2026] Received I2C: ID=CAR126, Lat=67.169472, Lon=53.573479, Park=1
+[Sun Jan  4 03:15:14 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:14 2026] Received I2C: ID=CAR379, Lat=48.655998, Lon=52.816147, Park=1
+[Sun Jan  4 03:15:14 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:15 2026] Received I2C: ID=CAR032, Lat=76.549095, Lon=30.501160, Park=0
+[Sun Jan  4 03:15:15 2026] sending to server failed
+[Sun Jan  4 03:15:15 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:15:15 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:15:15 2026] Received I2C: ID=CAR018, Lat=72.071785, Lon=25.558018, Park=0
+[Sun Jan  4 03:15:15 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:16 2026] Received I2C: ID=CAR862, Lat=5.072390, Lon=90.293518, Park=1
+[Sun Jan  4 03:15:16 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:16 2026] Received I2C: ID=CAR239, Lat=25.454807, Lon=72.873535, Park=1
+[Sun Jan  4 03:15:16 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:17 2026] Received I2C: ID=CAR126, Lat=67.169472, Lon=53.573479, Park=0
+[Sun Jan  4 03:15:17 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:17 2026] Received I2C: ID=CAR379, Lat=48.655998, Lon=52.816147, Park=0
+[Sun Jan  4 03:15:17 2026] sending to server failed
+[Sun Jan  4 03:15:17 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:15:17 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:15:18 2026] Received I2C: ID=CAR285, Lat=93.938271, Lon=35.530453, Park=1
+[Sun Jan  4 03:15:18 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:18 2026] Received I2C: ID=CAR862, Lat=5.072390, Lon=90.293518, Park=0
+[Sun Jan  4 03:15:18 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:19 2026] Received I2C: ID=CAR911, Lat=32.197701, Lon=51.491959, Park=1
+[Sun Jan  4 03:15:19 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:20 2026] Received I2C: ID=CAR967, Lat=90.306793, Lon=98.778824, Park=1
+[Sun Jan  4 03:15:20 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:20 2026] Received I2C: ID=CAR239, Lat=25.454807, Lon=72.873535, Park=0
+[Sun Jan  4 03:15:20 2026] sending to server failed
+[Sun Jan  4 03:15:20 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:15:20 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:15:21 2026] Received I2C: ID=CAR228, Lat=85.880516, Lon=90.603355, Park=1
+[Sun Jan  4 03:15:21 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:21 2026] Received I2C: ID=CAR315, Lat=32.015690, Lon=70.695793, Park=1
+[Sun Jan  4 03:15:21 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:22 2026] Received I2C: ID=CAR285, Lat=93.938271, Lon=35.530453, Park=0
+[Sun Jan  4 03:15:22 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:22 2026] Received I2C: ID=CAR603, Lat=89.965683, Lon=0.495132, Park=1
+[Sun Jan  4 03:15:22 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:23 2026] Received I2C: ID=CAR911, Lat=32.197701, Lon=51.491959, Park=0
+[Sun Jan  4 03:15:23 2026] sending to server failed
+[Sun Jan  4 03:15:23 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:15:23 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:15:23 2026] Received I2C: ID=CAR228, Lat=85.880516, Lon=90.603355, Park=0
+[Sun Jan  4 03:15:23 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:24 2026] Received I2C: ID=CAR967, Lat=90.306793, Lon=98.778824, Park=0
+[Sun Jan  4 03:15:24 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:24 2026] Received I2C: ID=CAR867, Lat=4.413924, Lon=72.626625, Park=1
+[Sun Jan  4 03:15:24 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:25 2026] Received I2C: ID=CAR859, Lat=15.849967, Lon=69.512260, Park=1
+[Sun Jan  4 03:15:25 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:25 2026] Received I2C: ID=CAR061, Lat=68.543159, Lon=71.078163, Park=1
+[Sun Jan  4 03:15:25 2026] sending to server failed
+[Sun Jan  4 03:15:25 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:15:25 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:15:26 2026] Received I2C: ID=CAR648, Lat=38.626419, Lon=95.620308, Park=1
+[Sun Jan  4 03:15:26 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:26 2026] Received I2C: ID=CAR103, Lat=37.691628, Lon=18.534521, Park=0
+[Sun Jan  4 03:15:26 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:27 2026] Received I2C: ID=CAR514, Lat=18.912094, Lon=80.484230, Park=1
+[Sun Jan  4 03:15:27 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:27 2026] Received I2C: ID=CAR872, Lat=48.775417, Lon=14.904033, Park=0
+[Sun Jan  4 03:15:27 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:28 2026] Received I2C: ID=CAR786, Lat=27.083153, Lon=57.136040, Park=1
+[Sun Jan  4 03:15:28 2026] sending to server failed
+[Sun Jan  4 03:15:28 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:15:28 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:15:28 2026] Received I2C: ID=CAR672, Lat=74.027100, Lon=36.846035, Park=0
+[Sun Jan  4 03:15:28 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:29 2026] Received I2C: ID=CAR872, Lat=69.321510, Lon=60.598045, Park=1
+[Sun Jan  4 03:15:29 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:29 2026] Received I2C: ID=CAR181, Lat=81.019684, Lon=89.875763, Park=0
+[Sun Jan  4 03:15:29 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:30 2026] Received I2C: ID=CAR756, Lat=79.745613, Lon=15.543124, Park=1
+[Sun Jan  4 03:15:30 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:30 2026] Received I2C: ID=CAR514, Lat=18.912094, Lon=80.484230, Park=0
+[Sun Jan  4 03:15:30 2026] sending to server failed
+[Sun Jan  4 03:15:30 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:15:30 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:15:31 2026] Received I2C: ID=CAR199, Lat=55.798805, Lon=25.367886, Park=1
+[Sun Jan  4 03:15:31 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:31 2026] Received I2C: ID=CAR648, Lat=38.626419, Lon=95.620308, Park=0
+[Sun Jan  4 03:15:31 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:32 2026] Received I2C: ID=CAR400, Lat=82.307533, Lon=62.775467, Park=1
+[Sun Jan  4 03:15:32 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:32 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:15:35 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:15:37 2026] Received I2C: ID=CAR212, Lat=53.855930, Lon=38.141617, Park=1
+[Sun Jan  4 03:15:37 2026] sending to server failed
+[Sun Jan  4 03:15:37 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:15:37 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:15:38 2026] Received I2C: ID=CAR199, Lat=55.798805, Lon=25.367886, Park=0
+[Sun Jan  4 03:15:38 2026] msg Sent to server successfully
+[Sun Jan  4 03:15:38 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:15:40 2026] System-wide shutdown initiated by Parent...
+[Sun Jan  4 03:15:40 2026] Program Terminated.
+
+[Sun Jan  4 03:26:41 2026] Config Loaded: Server 192.168.7.1:8080, I2C /dev/i2c-2 (Addr: 0x10)
+[Sun Jan  4 03:26:41 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:26:41 2026] I2C initialized: bus=/dev/i2c-2, addr=0x10
+[Sun Jan  4 03:26:41 2026] Received I2C: ID=CAR786, Lat=27.083153, Lon=57.136040, Park=0
+[Sun Jan  4 03:26:41 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:42 2026] Received I2C: ID=CAR756, Lat=79.745613, Lon=15.543124, Park=0
+[Sun Jan  4 03:26:42 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:42 2026] Received I2C: ID=CAR776, Lat=78.611198, Lon=29.588833, Park=1
+[Sun Jan  4 03:26:42 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:43 2026] Received I2C: ID=CAR872, Lat=69.321510, Lon=60.598045, Park=0
+[Sun Jan  4 03:26:43 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:43 2026] Received I2C: ID=CAR400, Lat=82.307533, Lon=62.775467, Park=0
+[Sun Jan  4 03:26:43 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:44 2026] Received I2C: ID=CAR101, Lat=94.346336, Lon=54.458202, Park=1
+[Sun Jan  4 03:26:44 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:44 2026] Received I2C: ID=CAR870, Lat=16.955336, Lon=47.700291, Park=1
+[Sun Jan  4 03:26:44 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:45 2026] Received I2C: ID=CAR776, Lat=78.611198, Lon=29.588833, Park=0
+[Sun Jan  4 03:26:45 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:46 2026] Received I2C: ID=CAR913, Lat=15.469615, Lon=9.755050, Park=1
+[Sun Jan  4 03:26:46 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:46 2026] Received I2C: ID=CAR212, Lat=53.855930, Lon=38.141617, Park=0
+[Sun Jan  4 03:26:46 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:47 2026] Received I2C: ID=CAR428, Lat=8.472878, Lon=95.499390, Park=1
+[Sun Jan  4 03:26:47 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:47 2026] Received I2C: ID=CAR101, Lat=94.346336, Lon=54.458202, Park=0
+[Sun Jan  4 03:26:47 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:48 2026] Received I2C: ID=CAR870, Lat=16.955336, Lon=47.700291, Park=0
+[Sun Jan  4 03:26:48 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:48 2026] Received I2C: ID=CAR599, Lat=56.772686, Lon=33.341816, Park=1
+[Sun Jan  4 03:26:48 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:49 2026] Received I2C: ID=CAR913, Lat=15.469615, Lon=9.755050, Park=0
+[Sun Jan  4 03:26:49 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:49 2026] Received I2C: ID=CAR381, Lat=0.691507, Lon=77.872726, Park=1
+[Sun Jan  4 03:26:49 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:50 2026] Received I2C: ID=CAR458, Lat=19.463175, Lon=75.015594, Park=1
+[Sun Jan  4 03:26:50 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:50 2026] Received I2C: ID=CAR597, Lat=58.620941, Lon=11.019502, Park=1
+[Sun Jan  4 03:26:50 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:51 2026] Received I2C: ID=CAR428, Lat=8.472878, Lon=95.499390, Park=0
+[Sun Jan  4 03:26:51 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:51 2026] Received I2C: ID=CAR381, Lat=0.691507, Lon=77.872726, Park=0
+[Sun Jan  4 03:26:51 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:52 2026] Received I2C: ID=CAR599, Lat=56.772686, Lon=33.341816, Park=0
+[Sun Jan  4 03:26:52 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:52 2026] Received I2C: ID=CAR898, Lat=26.606247, Lon=46.183144, Park=1
+[Sun Jan  4 03:26:52 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:53 2026] Received I2C: ID=CAR458, Lat=19.463175, Lon=75.015594, Park=0
+[Sun Jan  4 03:26:53 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:53 2026] Received I2C: ID=CAR518, Lat=78.024071, Lon=78.885063, Park=1
+[Sun Jan  4 03:26:53 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:54 2026] Received I2C: ID=CAR057, Lat=33.467541, Lon=39.578655, Park=1
+[Sun Jan  4 03:26:54 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:54 2026] Received I2C: ID=CAR898, Lat=26.606247, Lon=46.183144, Park=0
+[Sun Jan  4 03:26:54 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:55 2026] Received I2C: ID=CAR597, Lat=58.620941, Lon=11.019502, Park=0
+[Sun Jan  4 03:26:55 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:55 2026] Received I2C: ID=CAR036, Lat=65.075577, Lon=92.884094, Park=1
+[Sun Jan  4 03:26:55 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:56 2026] Received I2C: ID=CAR617, Lat=7.041830, Lon=79.413345, Park=1
+[Sun Jan  4 03:26:56 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:56 2026] Received I2C: ID=CAR149, Lat=51.509232, Lon=68.223862, Park=1
+[Sun Jan  4 03:26:56 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:57 2026] Received I2C: ID=CAR983, Lat=46.722557, Lon=3.965109, Park=1
+[Sun Jan  4 03:26:57 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:57 2026] Received I2C: ID=CAR057, Lat=33.467541, Lon=39.578655, Park=0
+[Sun Jan  4 03:26:57 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:58 2026] Received I2C: ID=CAR036, Lat=65.075577, Lon=92.884094, Park=0
+[Sun Jan  4 03:26:58 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:58 2026] Received I2C: ID=CAR518, Lat=78.024071, Lon=78.885063, Park=0
+[Sun Jan  4 03:26:58 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:59 2026] Received I2C: ID=CAR850, Lat=58.560501, Lon=13.463261, Park=1
+[Sun Jan  4 03:26:59 2026] msg Sent to server successfully
+[Sun Jan  4 03:26:59 2026] Received I2C: ID=CAR586, Lat=46.451115, Lon=24.591545, Park=1
+[Sun Jan  4 03:26:59 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:00 2026] Received I2C: ID=CAR983, Lat=46.722557, Lon=3.965109, Park=0
+[Sun Jan  4 03:27:00 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:00 2026] Received I2C: ID=CAR941, Lat=18.195650, Lon=22.214735, Park=1
+[Sun Jan  4 03:27:00 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:01 2026] Received I2C: ID=CAR149, Lat=51.509232, Lon=68.223862, Park=0
+[Sun Jan  4 03:27:01 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:01 2026] Received I2C: ID=CAR617, Lat=7.041830, Lon=79.413345, Park=0
+[Sun Jan  4 03:27:01 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:02 2026] Received I2C: ID=CAR130, Lat=25.019270, Lon=95.162949, Park=1
+[Sun Jan  4 03:27:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:02 2026] Received I2C: ID=CAR127, Lat=27.544754, Lon=70.917976, Park=1
+[Sun Jan  4 03:27:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:03 2026] Received I2C: ID=CAR941, Lat=18.195650, Lon=22.214735, Park=0
+[Sun Jan  4 03:27:03 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:03 2026] Received I2C: ID=CAR031, Lat=0.992816, Lon=81.428078, Park=1
+[Sun Jan  4 03:27:03 2026] sending to server failed
+[Sun Jan  4 03:27:03 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:27:03 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:27:04 2026] Received I2C: ID=CAR850, Lat=58.560501, Lon=13.463261, Park=0
+[Sun Jan  4 03:27:04 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:04 2026] Received I2C: ID=CAR586, Lat=46.451115, Lon=24.591545, Park=0
+[Sun Jan  4 03:27:04 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:05 2026] Received I2C: ID=CAR007, Lat=74.849365, Lon=69.105789, Park=1
+[Sun Jan  4 03:27:05 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:05 2026] Received I2C: ID=CAR299, Lat=62.391575, Lon=53.915924, Park=1
+[Sun Jan  4 03:27:05 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:06 2026] Received I2C: ID=CAR130, Lat=25.019270, Lon=95.162949, Park=0
+[Sun Jan  4 03:27:06 2026] sending to server failed
+[Sun Jan  4 03:27:06 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:27:06 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:27:06 2026] Received I2C: ID=CAR149, Lat=78.662941, Lon=58.559601, Park=1
+[Sun Jan  4 03:27:06 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:07 2026] Received I2C: ID=CAR127, Lat=27.544754, Lon=70.917976, Park=0
+[Sun Jan  4 03:27:07 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:07 2026] Received I2C: ID=CAR169, Lat=79.124657, Lon=25.032402, Park=1
+[Sun Jan  4 03:27:07 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:08 2026] Received I2C: ID=CAR034, Lat=22.451122, Lon=96.288414, Park=1
+[Sun Jan  4 03:27:08 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:08 2026] Received I2C: ID=CAR108, Lat=62.719578, Lon=37.314011, Park=0
+[Sun Jan  4 03:27:08 2026] sending to server failed
+[Sun Jan  4 03:27:08 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:27:08 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:27:09 2026] Received I2C: ID=CAR438, Lat=5.068413, Lon=7.192877, Park=0
+[Sun Jan  4 03:27:09 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:09 2026] Received I2C: ID=CAR195, Lat=2.443084, Lon=82.487671, Park=1
+[Sun Jan  4 03:27:09 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:10 2026] Received I2C: ID=CAR305, Lat=22.742887, Lon=10.896108, Park=0
+[Sun Jan  4 03:27:10 2026] msg Sent to server successfully
+[Sun Jan  4 03:27:10 2026] System-wide shutdown initiated by Parent...
+[Sun Jan  4 03:27:10 2026] Program Terminated.
+
+[Sun Jan  4 03:31:57 2026] Config Loaded: Server 192.168.7.1:8080, I2C /dev/i2c-2 (Addr: 0x10)
+[Sun Jan  4 03:31:57 2026] I2C initialized: bus=/dev/i2c-2, addr=0x10
+[Sun Jan  4 03:31:57 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:31:57 2026] Received I2C: ID=CAR715, Lat=71.468758, Lon=12.616894, Park=1
+[Sun Jan  4 03:31:57 2026] msg Sent to server successfully
+[Sun Jan  4 03:31:58 2026] Received I2C: ID=CAR690, Lat=29.109037, Lon=69.427147, Park=1
+[Sun Jan  4 03:31:58 2026] msg Sent to server successfully
+[Sun Jan  4 03:31:58 2026] Received I2C: ID=CAR034, Lat=22.451122, Lon=96.288414, Park=0
+[Sun Jan  4 03:31:58 2026] msg Sent to server successfully
+[Sun Jan  4 03:31:59 2026] Received I2C: ID=CAR190, Lat=92.109863, Lon=63.253628, Park=0
+[Sun Jan  4 03:31:59 2026] msg Sent to server successfully
+[Sun Jan  4 03:31:59 2026] Received I2C: ID=CAR735, Lat=21.246941, Lon=36.488319, Park=1
+[Sun Jan  4 03:31:59 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:00 2026] Received I2C: ID=CAR169, Lat=79.124657, Lon=25.032402, Park=0
+[Sun Jan  4 03:32:00 2026] sending to server failed
+[Sun Jan  4 03:32:00 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:32:00 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:32:00 2026] Received I2C: ID=CAR195, Lat=2.443084, Lon=82.487671, Park=0
+[Sun Jan  4 03:32:00 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:01 2026] Received I2C: ID=CAR715, Lat=71.468758, Lon=12.616894, Park=0
+[Sun Jan  4 03:32:01 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:01 2026] Received I2C: ID=CAR063, Lat=85.566864, Lon=61.057610, Park=1
+[Sun Jan  4 03:32:01 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:02 2026] Received I2C: ID=CAR592, Lat=9.350254, Lon=48.052387, Park=1
+[Sun Jan  4 03:32:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:02 2026] Received I2C: ID=CAR690, Lat=29.109037, Lon=69.427147, Park=0
+[Sun Jan  4 03:32:02 2026] sending to server failed
+[Sun Jan  4 03:32:02 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:32:02 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:32:03 2026] Received I2C: ID=CAR076, Lat=82.909134, Lon=92.893890, Park=1
+[Sun Jan  4 03:32:03 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:04 2026] Received I2C: ID=CAR063, Lat=85.566864, Lon=61.057610, Park=0
+[Sun Jan  4 03:32:04 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:04 2026] Received I2C: ID=CAR699, Lat=38.712391, Lon=75.128441, Park=1
+[Sun Jan  4 03:32:04 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:05 2026] Received I2C: ID=CAR539, Lat=55.505444, Lon=31.548925, Park=1
+[Sun Jan  4 03:32:05 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:05 2026] Received I2C: ID=CAR735, Lat=21.246941, Lon=36.488319, Park=0
+[Sun Jan  4 03:32:05 2026] sending to server failed
+[Sun Jan  4 03:32:05 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:32:05 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:32:06 2026] Received I2C: ID=CAR189, Lat=33.344589, Lon=97.502556, Park=1
+[Sun Jan  4 03:32:06 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:06 2026] Received I2C: ID=CAR699, Lat=38.712391, Lon=75.128441, Park=0
+[Sun Jan  4 03:32:06 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:07 2026] Received I2C: ID=CAR592, Lat=9.350254, Lon=48.052387, Park=0
+[Sun Jan  4 03:32:07 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:07 2026] Received I2C: ID=CAR076, Lat=82.909134, Lon=92.893890, Park=0
+[Sun Jan  4 03:32:07 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:08 2026] Received I2C: ID=CAR963, Lat=73.291290, Lon=88.029739, Park=1
+[Sun Jan  4 03:32:08 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:08 2026] Received I2C: ID=CAR087, Lat=88.212975, Lon=28.721577, Park=1
+[Sun Jan  4 03:32:08 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:09 2026] Received I2C: ID=CAR325, Lat=77.915245, Lon=32.160751, Park=1
+[Sun Jan  4 03:32:09 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:09 2026] Received I2C: ID=CAR539, Lat=55.505444, Lon=31.548925, Park=0
+[Sun Jan  4 03:32:09 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:10 2026] Received I2C: ID=CAR963, Lat=73.291290, Lon=88.029739, Park=0
+[Sun Jan  4 03:32:10 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:10 2026] Received I2C: ID=CAR978, Lat=11.131860, Lon=80.426010, Park=1
+[Sun Jan  4 03:32:10 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:11 2026] Received I2C: ID=CAR087, Lat=88.212975, Lon=28.721577, Park=0
+[Sun Jan  4 03:32:11 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:11 2026] Received I2C: ID=CAR189, Lat=33.344589, Lon=97.502556, Park=0
+[Sun Jan  4 03:32:11 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:12 2026] Received I2C: ID=CAR152, Lat=63.323509, Lon=95.881104, Park=1
+[Sun Jan  4 03:32:12 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:12 2026] Received I2C: ID=CAR515, Lat=10.595510, Lon=82.010803, Park=1
+[Sun Jan  4 03:32:12 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:13 2026] Received I2C: ID=CAR719, Lat=43.459202, Lon=35.405739, Park=1
+[Sun Jan  4 03:32:13 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:13 2026] Received I2C: ID=CAR978, Lat=11.131860, Lon=80.426010, Park=0
+[Sun Jan  4 03:32:13 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:14 2026] Received I2C: ID=CAR325, Lat=77.915245, Lon=32.160751, Park=0
+[Sun Jan  4 03:32:14 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:14 2026] Received I2C: ID=CAR296, Lat=71.927223, Lon=79.471489, Park=1
+[Sun Jan  4 03:32:14 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:15 2026] Received I2C: ID=CAR261, Lat=1.277121, Lon=61.442978, Park=1
+[Sun Jan  4 03:32:15 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:16 2026] Failed to read from I2C
+[Sun Jan  4 03:32:19 2026] Failed to read from I2C
+[Sun Jan  4 03:32:21 2026] Failed to read from I2C
+[Sun Jan  4 03:32:22 2026] Received I2C: ID=ACAR515, Lat=0.000000, Lon=-0.000000, Park=66
+[Sun Jan  4 03:32:22 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:22 2026] Received I2C: ID=CAR510, Lat=70.041275, Lon=19.814692, Park=1
+[Sun Jan  4 03:32:22 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:23 2026] Received I2C: ID=CAR152, Lat=63.323509, Lon=95.881104, Park=0
+[Sun Jan  4 03:32:23 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:23 2026] Received I2C: ID=CAR719, Lat=43.459202, Lon=35.405739, Park=0
+[Sun Jan  4 03:32:23 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:24 2026] Received I2C: ID=CAR296, Lat=71.927223, Lon=79.471489, Park=0
+[Sun Jan  4 03:32:24 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:24 2026] Received I2C: ID=CAR903, Lat=29.645010, Lon=68.833984, Park=1
+[Sun Jan  4 03:32:24 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:25 2026] Received I2C: ID=CAR261, Lat=1.277121, Lon=61.442978, Park=0
+[Sun Jan  4 03:32:25 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:25 2026] Received I2C: ID=CAR098, Lat=6.722923, Lon=16.368652, Park=1
+[Sun Jan  4 03:32:25 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:26 2026] Received I2C: ID=CAR231, Lat=70.930603, Lon=34.675522, Park=1
+[Sun Jan  4 03:32:26 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:26 2026] Received I2C: ID=CAR510, Lat=70.041275, Lon=19.814692, Park=0
+[Sun Jan  4 03:32:26 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:27 2026] Received I2C: ID=CAR115, Lat=52.893684, Lon=21.938641, Park=1
+[Sun Jan  4 03:32:27 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:27 2026] Received I2C: ID=CAR607, Lat=54.637032, Lon=30.677238, Park=1
+[Sun Jan  4 03:32:27 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:28 2026] Received I2C: ID=CAR903, Lat=29.645010, Lon=68.833984, Park=0
+[Sun Jan  4 03:32:28 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:28 2026] Received I2C: ID=CAR322, Lat=16.005665, Lon=42.833302, Park=1
+[Sun Jan  4 03:32:28 2026] sending to server failed
+[Sun Jan  4 03:32:28 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:32:28 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:32:29 2026] Received I2C: ID=CAR781, Lat=61.163258, Lon=9.953046, Park=1
+[Sun Jan  4 03:32:29 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:29 2026] Received I2C: ID=CAR231, Lat=70.930603, Lon=34.675522, Park=0
+[Sun Jan  4 03:32:29 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:30 2026] Received I2C: ID=CAR927, Lat=78.013847, Lon=45.862724, Park=0
+[Sun Jan  4 03:32:30 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:30 2026] Received I2C: ID=CAR188, Lat=28.716560, Lon=54.178871, Park=0
+[Sun Jan  4 03:32:30 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:31 2026] Received I2C: ID=CAR363, Lat=60.831406, Lon=14.082501, Park=1
+[Sun Jan  4 03:32:31 2026] sending to server failed
+[Sun Jan  4 03:32:31 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:32:31 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:32:32 2026] Received I2C: ID=CAR705, Lat=18.995132, Lon=30.490726, Park=0
+[Sun Jan  4 03:32:32 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:32 2026] Received I2C: ID=CAR755, Lat=93.878883, Lon=39.453789, Park=1
+[Sun Jan  4 03:32:32 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:33 2026] Received I2C: ID=CAR741, Lat=29.898252, Lon=51.568230, Park=0
+[Sun Jan  4 03:32:33 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:33 2026] Received I2C: ID=CAR456, Lat=18.896618, Lon=13.697550, Park=1
+[Sun Jan  4 03:32:33 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:34 2026] Received I2C: ID=CAR681, Lat=81.366707, Lon=28.321589, Park=0
+[Sun Jan  4 03:32:34 2026] sending to server failed
+[Sun Jan  4 03:32:34 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:32:34 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:32:34 2026] Received I2C: ID=CAR966, Lat=82.762184, Lon=52.539970, Park=1
+[Sun Jan  4 03:32:34 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:35 2026] Received I2C: ID=CAR127, Lat=64.554291, Lon=26.689899, Park=1
+[Sun Jan  4 03:32:35 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:35 2026] Received I2C: ID=CAR222, Lat=96.367874, Lon=53.433830, Park=1
+[Sun Jan  4 03:32:35 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:36 2026] Received I2C: ID=CAR755, Lat=93.878883, Lon=39.453789, Park=0
+[Sun Jan  4 03:32:36 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:36 2026] Received I2C: ID=CAR363, Lat=60.831406, Lon=14.082501, Park=0
+[Sun Jan  4 03:32:36 2026] sending to server failed
+[Sun Jan  4 03:32:36 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:32:36 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:32:37 2026] Received I2C: ID=CAR966, Lat=82.762184, Lon=52.539970, Park=0
+[Sun Jan  4 03:32:37 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:37 2026] Received I2C: ID=CAR644, Lat=73.690758, Lon=50.491013, Park=1
+[Sun Jan  4 03:32:37 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:38 2026] Received I2C: ID=CAR456, Lat=18.896618, Lon=13.697550, Park=0
+[Sun Jan  4 03:32:38 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:38 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:32:41 2026] Received I2C: ID=CAR048, Lat=34.326752, Lon=75.532982, Park=1
+[Sun Jan  4 03:32:41 2026] sending to server failed
+[Sun Jan  4 03:32:41 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:32:41 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:32:41 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:32:44 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:32:46 2026] Received I2C: ID=CAR230, Lat=50.868954, Lon=69.923012, Park=1
+[Sun Jan  4 03:32:46 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:47 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:32:49 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:32:52 2026] Received I2C: ID=CAR549, Lat=34.839386, Lon=83.469688, Park=1
+[Sun Jan  4 03:32:52 2026] sending to server failed
+[Sun Jan  4 03:32:52 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:32:52 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:32:52 2026] Received I2C: ID=CAR644, Lat=73.690758, Lon=50.491013, Park=0
+[Sun Jan  4 03:32:52 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:53 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:32:55 2026] Received I2C: ID=CAR127, Lat=64.554291, Lon=26.689899, Park=0
+[Sun Jan  4 03:32:55 2026] sending to server failed
+[Sun Jan  4 03:32:55 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:32:55 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:32:56 2026] Received I2C: ID=CAR199, Lat=20.437973, Lon=74.826660, Park=1
+[Sun Jan  4 03:32:56 2026] msg Sent to server successfully
+[Sun Jan  4 03:32:56 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:32:59 2026] Received I2C: ID=CAR222, Lat=96.367874, Lon=53.433830, Park=0
+[Sun Jan  4 03:32:59 2026] sending to server failed
+[Sun Jan  4 03:32:59 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:32:59 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:32:59 2026] Received I2C: ID=CAR048, Lat=34.326752, Lon=75.532982, Park=0
+[Sun Jan  4 03:32:59 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:00 2026] Received I2C: ID=CAR329, Lat=72.873779, Lon=8.517107, Park=1
+[Sun Jan  4 03:33:00 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:00 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:03 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:05 2026] Received I2C: ID=CAR962, Lat=34.522675, Lon=34.497879, Park=1
+[Sun Jan  4 03:33:05 2026] sending to server failed
+[Sun Jan  4 03:33:05 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:33:05 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:33:06 2026] Received I2C: ID=CAR230, Lat=50.868954, Lon=69.923012, Park=0
+[Sun Jan  4 03:33:06 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:06 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:09 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:11 2026] Received I2C: ID=CAR314, Lat=43.393066, Lon=23.214590, Park=1
+[Sun Jan  4 03:33:11 2026] sending to server failed
+[Sun Jan  4 03:33:11 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:33:11 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:33:12 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:14 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:17 2026] Received I2C: ID=CAR545, Lat=87.078568, Lon=18.080540, Park=1
+[Sun Jan  4 03:33:17 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:17 2026] Received I2C: ID=CAR199, Lat=20.437973, Lon=74.826660, Park=0
+[Sun Jan  4 03:33:17 2026] sending to server failed
+[Sun Jan  4 03:33:17 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:33:17 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:33:18 2026] Received I2C: ID=CAR549, Lat=34.839386, Lon=83.469688, Park=0
+[Sun Jan  4 03:33:18 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:18 2026] Received I2C: ID=CAR962, Lat=34.522675, Lon=34.497879, Park=0
+[Sun Jan  4 03:33:18 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:19 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:21 2026] Received I2C: ID=CAR140, Lat=36.185932, Lon=9.488721, Park=1
+[Sun Jan  4 03:33:21 2026] sending to server failed
+[Sun Jan  4 03:33:21 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:33:21 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:33:22 2026] Received I2C: ID=CAR329, Lat=72.873779, Lon=8.517107, Park=0
+[Sun Jan  4 03:33:22 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:22 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:25 2026] Received I2C: ID=CAR206, Lat=21.911114, Lon=5.623821, Park=1
+[Sun Jan  4 03:33:25 2026] sending to server failed
+[Sun Jan  4 03:33:25 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:33:25 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:33:25 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:28 2026] Received I2C: ID=CAR314, Lat=43.393066, Lon=23.214590, Park=0
+[Sun Jan  4 03:33:28 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:28 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:31 2026] Received I2C: ID=CAR205, Lat=67.482414, Lon=87.275093, Park=1
+[Sun Jan  4 03:33:31 2026] sending to server failed
+[Sun Jan  4 03:33:31 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:33:31 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:33:31 2026] Received I2C: ID=CAR140, Lat=36.185932, Lon=9.488721, Park=0
+[Sun Jan  4 03:33:31 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:32 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:34 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:37 2026] Received I2C: ID=CAR476, Lat=55.095600, Lon=68.821037, Park=1
+[Sun Jan  4 03:33:37 2026] sending to server failed
+[Sun Jan  4 03:33:37 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:33:37 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:33:38 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:40 2026] Received I2C: ID=CAR545, Lat=87.078568, Lon=18.080540, Park=0
+[Sun Jan  4 03:33:40 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:41 2026] Received I2C: ID=CAR752, Lat=57.048935, Lon=54.753502, Park=1
+[Sun Jan  4 03:33:41 2026] sending to server failed
+[Sun Jan  4 03:33:41 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:33:41 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:33:41 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:44 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:46 2026] Received I2C: ID=CAR059, Lat=71.273087, Lon=78.527054, Park=1
+[Sun Jan  4 03:33:46 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:47 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:49 2026] Received I2C: ID=CAR205, Lat=67.482414, Lon=87.275093, Park=0
+[Sun Jan  4 03:33:49 2026] sending to server failed
+[Sun Jan  4 03:33:49 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:33:49 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:33:50 2026] Received I2C: ID=CAR476, Lat=55.095600, Lon=68.821037, Park=0
+[Sun Jan  4 03:33:50 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:50 2026] Received I2C: ID=CAR198, Lat=2.451648, Lon=10.013374, Park=1
+[Sun Jan  4 03:33:50 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:51 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:53 2026] Received I2C: ID=CAR206, Lat=21.911114, Lon=5.623821, Park=0
+[Sun Jan  4 03:33:53 2026] sending to server failed
+[Sun Jan  4 03:33:53 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:33:53 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:33:54 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:56 2026] Received I2C: ID=CAR043, Lat=30.793562, Lon=75.507538, Park=1
+[Sun Jan  4 03:33:56 2026] msg Sent to server successfully
+[Sun Jan  4 03:33:57 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:33:59 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:02 2026] Received I2C: ID=CAR511, Lat=36.952240, Lon=62.652241, Park=1
+[Sun Jan  4 03:34:02 2026] sending to server failed
+[Sun Jan  4 03:34:02 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:34:02 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:34:02 2026] Received I2C: ID=CAR752, Lat=57.048935, Lon=54.753502, Park=0
+[Sun Jan  4 03:34:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:34:03 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:05 2026] Received I2C: ID=CAR198, Lat=2.451648, Lon=10.013374, Park=0
+[Sun Jan  4 03:34:05 2026] sending to server failed
+[Sun Jan  4 03:34:05 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:34:05 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:34:06 2026] Received I2C: ID=CAR534, Lat=3.737121, Lon=5.865069, Park=1
+[Sun Jan  4 03:34:06 2026] msg Sent to server successfully
+[Sun Jan  4 03:34:06 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:09 2026] Received I2C: ID=CAR059, Lat=71.273087, Lon=78.527054, Park=0
+[Sun Jan  4 03:34:09 2026] sending to server failed
+[Sun Jan  4 03:34:09 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:34:09 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:34:09 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:12 2026] Received I2C: ID=CAR305, Lat=75.942627, Lon=94.405579, Park=1
+[Sun Jan  4 03:34:12 2026] msg Sent to server successfully
+[Sun Jan  4 03:34:12 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:15 2026] Received I2C: ID=CAR511, Lat=36.952240, Lon=62.652241, Park=0
+[Sun Jan  4 03:34:15 2026] sending to server failed
+[Sun Jan  4 03:34:15 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:34:15 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:34:15 2026] Received I2C: ID=CAR802, Lat=93.602325, Lon=18.804804, Park=1
+[Sun Jan  4 03:34:15 2026] msg Sent to server successfully
+[Sun Jan  4 03:34:16 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:18 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:21 2026] Received I2C: ID=CAR302, Lat=72.285530, Lon=73.257973, Park=1
+[Sun Jan  4 03:34:21 2026] sending to server failed
+[Sun Jan  4 03:34:21 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:34:21 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:34:21 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:24 2026] Received I2C: ID=CAR043, Lat=30.793562, Lon=75.507538, Park=0
+[Sun Jan  4 03:34:24 2026] msg Sent to server successfully
+[Sun Jan  4 03:34:24 2026] Received I2C: ID=CAR534, Lat=3.737121, Lon=5.865069, Park=0
+[Sun Jan  4 03:34:24 2026] sending to server failed
+[Sun Jan  4 03:34:24 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:34:24 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:34:25 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:27 2026] Received I2C: ID=CAR607, Lat=68.944504, Lon=93.041649, Park=1
+[Sun Jan  4 03:34:27 2026] msg Sent to server successfully
+[Sun Jan  4 03:34:28 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:30 2026] Received I2C: ID=CAR303, Lat=50.097878, Lon=23.731808, Park=1
+[Sun Jan  4 03:34:30 2026] sending to server failed
+[Sun Jan  4 03:34:30 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:34:30 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:34:31 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:33 2026] Received I2C: ID=CAR305, Lat=75.942627, Lon=94.405579, Park=0
+[Sun Jan  4 03:34:33 2026] msg Sent to server successfully
+[Sun Jan  4 03:34:34 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:36 2026] Received I2C: ID=CAR302, Lat=72.285530, Lon=73.257973, Park=0
+[Sun Jan  4 03:34:36 2026] sending to server failed
+[Sun Jan  4 03:34:36 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:34:36 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:34:37 2026] Received I2C: ID=CAR368, Lat=73.290672, Lon=70.387733, Park=1
+[Sun Jan  4 03:34:37 2026] msg Sent to server successfully
+[Sun Jan  4 03:34:37 2026] Received I2C: ID=CAR802, Lat=93.602325, Lon=18.804804, Park=0
+[Sun Jan  4 03:34:37 2026] msg Sent to server successfully
+[Sun Jan  4 03:34:38 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:40 2026] Received I2C: ID=CAR934, Lat=51.300056, Lon=24.998030, Park=1
+[Sun Jan  4 03:34:40 2026] sending to server failed
+[Sun Jan  4 03:34:40 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:34:40 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:34:41 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:43 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:46 2026] Received I2C: ID=CAR241, Lat=38.717911, Lon=66.425262, Park=1
+[Sun Jan  4 03:34:46 2026] msg Sent to server successfully
+[Sun Jan  4 03:34:46 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:49 2026] Received I2C: ID=CAR303, Lat=50.097878, Lon=23.731808, Park=0
+[Sun Jan  4 03:34:49 2026] sending to server failed
+[Sun Jan  4 03:34:49 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:34:49 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:34:49 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:52 2026] Received I2C: ID=CAR690, Lat=58.651531, Lon=9.953583, Park=1
+[Sun Jan  4 03:34:52 2026] msg Sent to server successfully
+[Sun Jan  4 03:34:52 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:55 2026] Received I2C: ID=CAR607, Lat=68.944504, Lon=93.041649, Park=0
+[Sun Jan  4 03:34:55 2026] sending to server failed
+[Sun Jan  4 03:34:55 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:34:55 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:34:55 2026] Received I2C: ID=CAR512, Lat=83.552757, Lon=32.927402, Park=1
+[Sun Jan  4 03:34:55 2026] msg Sent to server successfully
+[Sun Jan  4 03:34:56 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:34:58 2026] Received I2C: ID=CAR934, Lat=51.300056, Lon=24.998030, Park=0
+[Sun Jan  4 03:34:58 2026] sending to server failed
+[Sun Jan  4 03:34:58 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:34:58 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:34:59 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:01 2026] Received I2C: ID=CAR929, Lat=90.963531, Lon=62.730061, Park=1
+[Sun Jan  4 03:35:01 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:02 2026] Received I2C: ID=CAR368, Lat=73.290672, Lon=70.387733, Park=0
+[Sun Jan  4 03:35:02 2026] sending to server failed
+[Sun Jan  4 03:35:02 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:35:02 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:35:02 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:05 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:07 2026] Received I2C: ID=CAR674, Lat=89.127319, Lon=32.206547, Park=1
+[Sun Jan  4 03:35:07 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:08 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:10 2026] Received I2C: ID=CAR565, Lat=49.522758, Lon=62.298775, Park=1
+[Sun Jan  4 03:35:10 2026] sending to server failed
+[Sun Jan  4 03:35:10 2026] Server disconnected. Attempting to reconnect...
+[Sun Jan  4 03:35:10 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:35:11 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:13 2026] Received I2C: ID=CAR241, Lat=38.717911, Lon=66.425262, Park=0
+[Sun Jan  4 03:35:13 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:14 2026] Received I2C: ID=CAR929, Lat=90.963531, Lon=62.730061, Park=0
+[Sun Jan  4 03:35:14 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:14 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:17 2026] Received I2C: ID=CAR220, Lat=18.085905, Lon=84.692680, Park=1
+[Sun Jan  4 03:35:17 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:17 2026] Received I2C: ID=CAR512, Lat=83.552757, Lon=32.927402, Park=0
+[Sun Jan  4 03:35:17 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:18 2026] Received I2C: ID=CAR690, Lat=58.651531, Lon=9.953583, Park=0
+[Sun Jan  4 03:35:18 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:18 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:21 2026] Received I2C: ID=CAR474, Lat=10.992269, Lon=96.147659, Park=1
+[Sun Jan  4 03:35:21 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:21 2026] Received I2C: ID=CAR674, Lat=89.127319, Lon=32.206547, Park=0
+[Sun Jan  4 03:35:21 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:22 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:24 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:27 2026] Received I2C: ID=CAR763, Lat=57.201290, Lon=4.478796, Park=1
+[Sun Jan  4 03:35:27 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:27 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:30 2026] Received I2C: ID=CAR830, Lat=47.281597, Lon=52.197063, Park=1
+[Sun Jan  4 03:35:30 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:30 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:33 2026] Received I2C: ID=CAR220, Lat=18.085905, Lon=84.692680, Park=0
+[Sun Jan  4 03:35:33 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:33 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:36 2026] Received I2C: ID=CAR491, Lat=18.885010, Lon=16.248550, Park=1
+[Sun Jan  4 03:35:36 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:36 2026] Received I2C: ID=CAR474, Lat=10.992269, Lon=96.147659, Park=0
+[Sun Jan  4 03:35:36 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:37 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:39 2026] Received I2C: ID=CAR565, Lat=49.522758, Lon=62.298775, Park=0
+[Sun Jan  4 03:35:39 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:40 2026] Received I2C: ID=CAR918, Lat=19.668589, Lon=36.884647, Park=1
+[Sun Jan  4 03:35:40 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:40 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:43 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:45 2026] Received I2C: ID=CAR791, Lat=45.317123, Lon=94.463890, Park=1
+[Sun Jan  4 03:35:45 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:46 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:48 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:51 2026] Received I2C: ID=CAR491, Lat=18.885010, Lon=16.248550, Park=0
+[Sun Jan  4 03:35:51 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:51 2026] Received I2C: ID=CAR125, Lat=53.719978, Lon=60.666229, Park=1
+[Sun Jan  4 03:35:51 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:52 2026] Received I2C: ID=CAR918, Lat=19.668589, Lon=36.884647, Park=0
+[Sun Jan  4 03:35:52 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:52 2026] Received I2C: ID=CAR763, Lat=57.201290, Lon=4.478796, Park=0
+[Sun Jan  4 03:35:52 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:53 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:55 2026] Received I2C: ID=CAR923, Lat=76.910851, Lon=30.456182, Park=1
+[Sun Jan  4 03:35:55 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:56 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:35:58 2026] Received I2C: ID=CAR830, Lat=47.281597, Lon=52.197063, Park=0
+[Sun Jan  4 03:35:58 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:59 2026] Received I2C: ID=CAR791, Lat=45.317123, Lon=94.463890, Park=0
+[Sun Jan  4 03:35:59 2026] msg Sent to server successfully
+[Sun Jan  4 03:35:59 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:02 2026] Received I2C: ID=CAR769, Lat=84.421486, Lon=11.701760, Park=1
+[Sun Jan  4 03:36:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:02 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:05 2026] Received I2C: ID=CAR859, Lat=15.851887, Lon=3.009784, Park=1
+[Sun Jan  4 03:36:05 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:05 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:08 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:11 2026] Received I2C: ID=CAR125, Lat=53.719978, Lon=60.666229, Park=0
+[Sun Jan  4 03:36:11 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:11 2026] Received I2C: ID=CAR307, Lat=40.605774, Lon=55.915527, Park=1
+[Sun Jan  4 03:36:11 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:12 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:14 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:17 2026] Received I2C: ID=CAR015, Lat=44.423756, Lon=64.756973, Park=1
+[Sun Jan  4 03:36:17 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:17 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:20 2026] Received I2C: ID=CAR923, Lat=76.910851, Lon=30.456182, Park=0
+[Sun Jan  4 03:36:20 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:20 2026] Received I2C: ID=CAR859, Lat=15.851887, Lon=3.009784, Park=0
+[Sun Jan  4 03:36:20 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:21 2026] Received I2C: ID=CAR769, Lat=84.421486, Lon=11.701760, Park=0
+[Sun Jan  4 03:36:21 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:21 2026] Received I2C: ID=CAR095, Lat=51.437759, Lon=12.050563, Park=1
+[Sun Jan  4 03:36:21 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:22 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:24 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:27 2026] Received I2C: ID=CAR373, Lat=92.863892, Lon=29.929611, Park=1
+[Sun Jan  4 03:36:27 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:27 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:30 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:32 2026] Received I2C: ID=CAR027, Lat=28.400417, Lon=96.682663, Park=1
+[Sun Jan  4 03:36:32 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:33 2026] Received I2C: ID=CAR307, Lat=40.605774, Lon=55.915527, Park=0
+[Sun Jan  4 03:36:33 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:33 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:36 2026] Received I2C: ID=CAR493, Lat=47.983978, Lon=70.927307, Park=1
+[Sun Jan  4 03:36:36 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:36 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:39 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:41 2026] Received I2C: ID=CAR474, Lat=34.655518, Lon=31.492403, Park=1
+[Sun Jan  4 03:36:41 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:42 2026] Received I2C: ID=CAR373, Lat=92.863892, Lon=29.929611, Park=0
+[Sun Jan  4 03:36:42 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:42 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:36:45 2026] Received I2C: ID=CAR015, Lat=44.423756, Lon=64.756973, Park=0
+[Sun Jan  4 03:36:45 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:45 2026] Received I2C: ID=CAR044, Lat=88.275459, Lon=90.811615, Park=1
+[Sun Jan  4 03:36:45 2026] msg Sent to server successfully
+[Sun Jan  4 03:36:46 2026] No message. waiting 2 seconds...
+[Sun Jan  4 03:41:18 2026] Config Loaded: Server 192.168.7.1:8080, I2C /dev/i2c-2 (Addr: 0x10)
+[Sun Jan  4 03:41:18 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:41:18 2026] I2C initialized: bus=/dev/i2c-2, addr=0x10
+[Sun Jan  4 03:41:18 2026] Received I2C: ID=CAR095, Lat=51.437759, Lon=12.050563, Park=0
+[Sun Jan  4 03:41:18 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:18 2026] Received I2C: ID=CAR493, Lat=47.983978, Lon=70.927307, Park=0
+[Sun Jan  4 03:41:18 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:19 2026] Received I2C: ID=CAR330, Lat=60.155602, Lon=25.029823, Park=1
+[Sun Jan  4 03:41:19 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:19 2026] Received I2C: ID=CAR027, Lat=28.400417, Lon=96.682663, Park=0
+[Sun Jan  4 03:41:19 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:20 2026] Received I2C: ID=CAR474, Lat=34.655518, Lon=31.492403, Park=0
+[Sun Jan  4 03:41:20 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:20 2026] Received I2C: ID=CAR765, Lat=13.280932, Lon=36.498264, Park=1
+[Sun Jan  4 03:41:20 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:21 2026] Received I2C: ID=CAR044, Lat=88.275459, Lon=90.811615, Park=0
+[Sun Jan  4 03:41:21 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:21 2026] Received I2C: ID=CAR186, Lat=87.246040, Lon=96.279167, Park=1
+[Sun Jan  4 03:41:21 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:22 2026] Received I2C: ID=CAR938, Lat=19.117392, Lon=98.978592, Park=1
+[Sun Jan  4 03:41:22 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:22 2026] Received I2C: ID=CAR936, Lat=42.847073, Lon=35.367340, Park=1
+[Sun Jan  4 03:41:22 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:23 2026] Received I2C: ID=CAR330, Lat=60.155602, Lon=25.029823, Park=0
+[Sun Jan  4 03:41:23 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:24 2026] Received I2C: ID=CAR226, Lat=69.441101, Lon=38.219624, Park=1
+[Sun Jan  4 03:41:24 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:24 2026] Termination requested via SIGINT (Ctrl+C).
+[Sun Jan  4 03:41:24 2026] Parent (TCP Client) shutting down...
+[Sun Jan  4 03:41:24 2026] Termination requested via SIGINT (Ctrl+C).
+[Sun Jan  4 03:41:24 2026] Child (I2C Process) shutting down...
+[Sun Jan  4 03:41:24 2026] Received I2C: ID=CAR186, Lat=87.246040, Lon=96.279167, Park=0
+[Sun Jan  4 03:41:24 2026] msg Sent to server successfully
+[Sun Jan  4 03:41:25 2026] Program Terminated.
+
+[Sun Jan  4 03:43:15 2026] Config Loaded: Server 192.168.7.1:8080, I2C /dev/i2c-2 (Addr: 0x10)
+[Sun Jan  4 03:43:15 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:43:15 2026] I2C initialized: bus=/dev/i2c-2, addr=0x10
+[Sun Jan  4 03:43:15 2026] Received I2C: ID=CAR078, Lat=69.989601, Lon=45.253387, Park=1
+[Sun Jan  4 03:43:15 2026] msg Sent to server successfully
+[Sun Jan  4 03:43:15 2026] Received I2C: ID=CAR765, Lat=13.280932, Lon=36.498264, Park=0
+[Sun Jan  4 03:43:15 2026] msg Sent to server successfully
+[Sun Jan  4 03:43:16 2026] Received I2C: ID=CAR871, Lat=1.749228, Lon=11.690078, Park=1
+[Sun Jan  4 03:43:16 2026] msg Sent to server successfully
+[Sun Jan  4 03:43:16 2026] Received I2C: ID=CAR453, Lat=10.928328, Lon=18.725607, Park=1
+[Sun Jan  4 03:43:16 2026] msg Sent to server successfully
+[Sun Jan  4 03:43:17 2026] Received I2C: ID=CAR938, Lat=19.117392, Lon=98.978592, Park=0
+[Sun Jan  4 03:43:17 2026] msg Sent to server successfully
+[Sun Jan  4 03:43:17 2026] Received I2C: ID=CAR226, Lat=69.441101, Lon=38.219624, Park=0
+[Sun Jan  4 03:43:17 2026] msg Sent to server successfully
+[Sun Jan  4 03:43:18 2026] Received I2C: ID=CAR648, Lat=13.152679, Lon=65.685509, Park=1
+[Sun Jan  4 03:43:18 2026] msg Sent to server successfully
+[Sun Jan  4 03:43:18 2026] Received I2C: ID=CAR936, Lat=42.847073, Lon=35.367340, Park=0
+[Sun Jan  4 03:43:18 2026] msg Sent to server successfully
+[Sun Jan  4 03:43:19 2026] Received I2C: ID=CAR130, Lat=12.669743, Lon=97.472389, Park=1
+[Sun Jan  4 03:43:19 2026] msg Sent to server successfully
+[Sun Jan  4 03:43:19 2026] Received I2C: ID=CAR453, Lat=10.928328, Lon=18.725607, Park=0
+[Sun Jan  4 03:43:19 2026] msg Sent to server successfully
+[Sun Jan  4 03:43:20 2026] Received I2C: ID=CAR078, Lat=69.989601, Lon=45.253387, Park=0
+[Sun Jan  4 03:43:20 2026] msg Sent to server successfully
+[Sun Jan  4 03:43:21 2026] Received I2C: ID=CAR775, Lat=20.461531, Lon=39.835484, Park=1
+[Sun Jan  4 03:43:21 2026] msg Sent to server successfully
+[Sun Jan  4 03:43:21 2026] Termination requested via SIGINT (Ctrl+C).
+[Sun Jan  4 03:43:21 2026] Parent (TCP Client) shutting down...
+[Sun Jan  4 03:43:21 2026] Program Terminated.
+
+[Sun Jan  4 03:44:01 2026] Config Loaded: Server 192.168.7.1:8080, I2C /dev/i2c-2 (Addr: 0x10)
+[Sun Jan  4 03:44:01 2026] I2C initialized: bus=/dev/i2c-2, addr=0x10
+[Sun Jan  4 03:44:01 2026] Connected successfuly to server 192.168.7.1:8080
+[Sun Jan  4 03:44:01 2026] Received I2C: ID=CAR998, Lat=40.769421, Lon=17.131897, Park=1
+[Sun Jan  4 03:44:01 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:02 2026] Received I2C: ID=CAR871, Lat=1.749228, Lon=11.690078, Park=0
+[Sun Jan  4 03:44:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:02 2026] Received I2C: ID=CAR110, Lat=3.709526, Lon=26.904409, Park=1
+[Sun Jan  4 03:44:02 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:03 2026] Received I2C: ID=CAR775, Lat=20.461531, Lon=39.835484, Park=0
+[Sun Jan  4 03:44:03 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:03 2026] Received I2C: ID=CAR450, Lat=98.624840, Lon=93.979836, Park=1
+[Sun Jan  4 03:44:03 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:04 2026] Received I2C: ID=CAR998, Lat=40.769421, Lon=17.131897, Park=0
+[Sun Jan  4 03:44:04 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:04 2026] Received I2C: ID=CAR648, Lat=13.152679, Lon=65.685509, Park=0
+[Sun Jan  4 03:44:04 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:05 2026] Received I2C: ID=CAR913, Lat=93.372101, Lon=63.636398, Park=1
+[Sun Jan  4 03:44:05 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:05 2026] Received I2C: ID=CAR130, Lat=12.669743, Lon=97.472389, Park=0
+[Sun Jan  4 03:44:05 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:06 2026] Received I2C: ID=CAR862, Lat=81.760681, Lon=16.743706, Park=1
+[Sun Jan  4 03:44:06 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:06 2026] Received I2C: ID=CAR450, Lat=98.624840, Lon=93.979836, Park=0
+[Sun Jan  4 03:44:06 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:07 2026] Received I2C: ID=CAR594, Lat=50.793121, Lon=31.564915, Park=1
+[Sun Jan  4 03:44:07 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:07 2026] Received I2C: ID=CAR913, Lat=93.372101, Lon=63.636398, Park=0
+[Sun Jan  4 03:44:07 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:08 2026] Received I2C: ID=CAR110, Lat=3.709526, Lon=26.904409, Park=0
+[Sun Jan  4 03:44:08 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:08 2026] Received I2C: ID=CAR227, Lat=60.779804, Lon=48.313107, Park=1
+[Sun Jan  4 03:44:08 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:09 2026] Received I2C: ID=CAR985, Lat=19.922714, Lon=67.636734, Park=1
+[Sun Jan  4 03:44:09 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:09 2026] Received I2C: ID=CAR862, Lat=81.760681, Lon=16.743706, Park=0
+[Sun Jan  4 03:44:09 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:10 2026] Received I2C: ID=CAR940, Lat=42.083416, Lon=94.519302, Park=1
+[Sun Jan  4 03:44:10 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:10 2026] Received I2C: ID=CAR594, Lat=50.793121, Lon=31.564915, Park=0
+[Sun Jan  4 03:44:10 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:11 2026] Received I2C: ID=CAR056, Lat=69.352806, Lon=26.394415, Park=1
+[Sun Jan  4 03:44:11 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:11 2026] Received I2C: ID=CAR227, Lat=60.779804, Lon=48.313107, Park=0
+[Sun Jan  4 03:44:11 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:12 2026] Received I2C: ID=CAR881, Lat=31.709627, Lon=23.021601, Park=1
+[Sun Jan  4 03:44:12 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:12 2026] Received I2C: ID=CAR534, Lat=13.441043, Lon=90.884850, Park=1
+[Sun Jan  4 03:44:12 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:13 2026] Received I2C: ID=CAR124, Lat=46.354088, Lon=46.044136, Park=1
+[Sun Jan  4 03:44:13 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:13 2026] Received I2C: ID=CAR940, Lat=42.083416, Lon=94.519302, Park=0
+[Sun Jan  4 03:44:13 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:14 2026] Received I2C: ID=CAR985, Lat=19.922714, Lon=67.636734, Park=0
+[Sun Jan  4 03:44:14 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:14 2026] Received I2C: ID=CAR045, Lat=57.728500, Lon=98.598129, Park=1
+[Sun Jan  4 03:44:14 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:15 2026] Received I2C: ID=CAR876, Lat=97.190567, Lon=64.878395, Park=0
+[Sun Jan  4 03:44:15 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:15 2026] Received I2C: ID=CAR132, Lat=30.049721, Lon=57.887924, Park=1
+[Sun Jan  4 03:44:15 2026] msg Sent to server successfully
+[Sun Jan  4 03:44:16 2026] Termination requested via SIGTERM (systemctl stop).
+[Sun Jan  4 03:44:16 2026] Parent (TCP Client) shutting down...
+[Sun Jan  4 03:44:16 2026] Program Terminated.
+

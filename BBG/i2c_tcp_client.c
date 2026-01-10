@@ -8,6 +8,7 @@
 #include "bbg_communication.h"
 
 static int running = 1;
+int is_parent = 0;
 
 /**
  * @brief Main entry point. Implements Process 1 and Process 2 architecture via fork and pipe.
@@ -22,7 +23,12 @@ int main(void) {
     load_config(server_ip, &server_port, i2c_bus, &i2c_addr);
 
     int pipefd[2]; // pipefd[0] is read, pipefd[1] is write
-    signal(SIGINT, handle_sigint);
+    
+    // When SIGINT/SIGTERM send to handle_sigint
+    signal(SIGINT, handle_sigint);  // For Ctrl+C
+    signal(SIGTERM, handle_sigint); // For systemctl stop
+    // Ignore SIGPIPE so the program doesn't crash when server disconnects
+    signal(SIGPIPE, SIG_IGN);
 
     if (pipe(pipefd) == -1) {
         perror("pipe failed");
@@ -38,6 +44,7 @@ int main(void) {
 
     if (pid == 0) {
         /* PROCESS 2: I2C COMMUNICATION */
+        is_parent = 0;
         close(pipefd[0]); // Close read end
         int i2c_fd = init_i2c(i2c_bus, i2c_addr);
         parking_message_t msg;
@@ -48,7 +55,9 @@ int main(void) {
                 write(pipefd[1], &msg, sizeof(parking_message_t));
             }
             else{
-                printf("Failed to read from I2C\n");
+                if (msg.is_parking != -1){
+                    log_event("Failed to read from I2C");
+                }
             }
             usleep(500000); 
         }
@@ -58,6 +67,7 @@ int main(void) {
 
     } else {
         /* PROCESS 1: TCP ETHERNET CLIENT */
+        is_parent = 1;
         close(pipefd[1]); // Close write end
         int sock = -1;
         parking_message_t msg_from_pipe;
@@ -66,6 +76,7 @@ int main(void) {
             if (sock < 0) {
                 sock = connect_to_server(server_ip, server_port);
                 if (sock < 0) {
+                    close(sock);
                     sleep(3);
                     continue;
                 }
@@ -75,7 +86,7 @@ int main(void) {
             ssize_t n = read(pipefd[0], &msg_from_pipe, sizeof(parking_message_t));
             if (n > 0) {
                 if (send_to_server(sock, &msg_from_pipe) < 0) {
-                    printf("Failed to send to server\n");
+                    log_event("Server disconnected. Attempting to reconnect...");
                     close(sock);
                     sock = -1;
                 }
@@ -86,7 +97,7 @@ int main(void) {
         wait(NULL); // Cleanup child process
     }
 
-    printf("Terminated.\n");
+    log_event("Program Terminated.\n");
     return 0;
 }
 
@@ -95,9 +106,16 @@ int main(void) {
  * @param sig Signal number received.
  */
 void handle_sigint(int sig) {
-    (void)sig;
-    running = 0;
-    printf("\nExiting gracefully...\n");
+    running = 0; // Breaks the while loops in both processes
+    
+    if (is_parent) {
+        if (sig == SIGINT) {
+            log_event("Termination requested via SIGINT (Ctrl+C).");
+        } else if (sig == SIGTERM) {
+            log_event("Termination requested via SIGTERM (systemctl stop).");
+        }
+        log_event("Parent (TCP Client) shutting down...");
+    }
 }
 
 /**
@@ -126,7 +144,9 @@ int connect_to_server(const char *ip, int port) {
         close(sock);
         return -1;
     }
-    printf("Connected to server %s:%d\n", ip, port);
+    char log_msg[100];
+    snprintf(log_msg, sizeof(log_msg), "Connected successfuly to server %s:%d", ip, port);
+    log_event(log_msg);
     return sock;
 }
 
@@ -147,7 +167,10 @@ int init_i2c(const char *bus, int addr) {
         close(fd);
         exit(EXIT_FAILURE);
     }
-    printf("I2C initialized: bus=%s, addr=0x%02X\n", bus, addr);
+    char log_msg[100];
+    snprintf(log_msg, sizeof(log_msg),"I2C initialized: bus=%s, addr=0x%02X", bus, addr);
+    log_event(log_msg);
+
     return fd;
 }
 
@@ -158,6 +181,8 @@ int init_i2c(const char *bus, int addr) {
  * @return Bytes read, or -1 on failure/empty message.
  */
 ssize_t read_i2c_message(int fd, parking_message_t *msg) {
+    char log_msg[100];
+
     ssize_t bytes_read = read(fd, msg, sizeof(parking_message_t));
 
     if (bytes_read < 0) {
@@ -165,17 +190,19 @@ ssize_t read_i2c_message(int fd, parking_message_t *msg) {
         return -1;
     }
     if (bytes_read != sizeof(parking_message_t)) {
-        fprintf(stderr, "Warning: incomplete or Empty I2C message (got %zd / %zu bytes)\n",
+        snprintf(log_msg, sizeof(log_msg), "Warning: incomplete or Empty I2C message (got %zd / %zu bytes)\n",
                 bytes_read, sizeof(parking_message_t));
         return -1;
     }
     if(msg->is_parking == -1){
-        printf("No message. waiting...\n");
+        log_event("No message. waiting 2 seconds...");
+        sleep(2); // wait 3 seconds
         return -1;
     } 
 
-    printf("Received I2C: ID=%s, Lat=%f, Lon=%f, Park=%d\n", 
+    snprintf(log_msg, sizeof(log_msg),"Received I2C: ID=%s, Lat=%f, Lon=%f, Park=%d", 
             msg->vehicle_id, msg->lat, msg->lon, msg->is_parking);
+    log_event(log_msg);
     
     msg->time = (uint64_t)time(NULL); 
     return bytes_read;
@@ -190,10 +217,11 @@ ssize_t read_i2c_message(int fd, parking_message_t *msg) {
 int send_to_server(int sock, const parking_message_t *msg) {
     if (msg == NULL) return 0;
     if (send(sock, msg, sizeof(parking_message_t), 0) < 0) {
-        perror("sending to server failed");
+        log_event("sending to server failed");
+        close(sock);
         return -1;
     }
-    printf("Sent to server successfully\n");
+    log_event("msg Sent to server successfully");
     return 0;
 }
 
@@ -230,5 +258,23 @@ void load_config(char *ip, int *port, char *bus, int *addr) {
     }
 
     fclose(fp);
-    printf("Config Loaded: Server %s:%d, I2C %s (Addr: 0x%02X)\n", ip, *port, bus, *addr);
+    char log_msg[100];
+    snprintf(log_msg, sizeof(log_msg), "Config Loaded: Server %s:%d, I2C %s (Addr: 0x%02X)", ip, *port, bus, *addr);
+    log_event(log_msg);
+}
+
+/**
+ * @brief Logs messages to a file with a timestamp.
+ * @param message The string to log.
+ */
+void log_event(const char *message) {
+    FILE *logfile = fopen("bbg_system.log", "a");
+    if (logfile == NULL) return;
+
+    time_t now = time(NULL);
+    char *timestamp = ctime(&now);
+    timestamp[strlen(timestamp) - 1] = '\0'; // Remove newline
+
+    fprintf(logfile, "[%s] %s\n", timestamp, message);
+    fclose(logfile);
 }
