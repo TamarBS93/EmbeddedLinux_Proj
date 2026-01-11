@@ -1,0 +1,48 @@
+/*
+ * msg_queue.c
+ *
+ *  Created on: Dec 31, 2025
+ *      Author: Tamar Ben Shushan
+ */
+#include "msg_queue.h"
+
+void initQueue(MessageQueue* q) {
+    q->head = NULL;
+    q->tail = NULL;
+}
+
+void enqueue(MessageQueue* q, parking_message_t newMsg) {
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    if (!newNode) {
+        printf("Memory allocation failed!\n");
+        return;
+    }
+    newNode->msg = newMsg;
+    newNode->next = NULL;
+
+    if (q->tail == NULL) {  // empty queue
+        q->head = newNode;
+        q->tail = newNode;
+    } else {
+        q->tail->next = newNode;
+        q->tail = newNode;
+    }
+}
+
+int dequeue(MessageQueue* q, parking_message_t* outMsg) {
+    if (q->head == NULL) {
+        return -1; // queue empty
+    }
+
+    Node* temp = q->head;
+    *outMsg = temp->msg;
+    q->head = q->head->next;
+
+    if (q->head == NULL) {  // queue is now empty
+        q->tail = NULL;
+    }
+
+    free(temp);
+    return 0; // success
+}
+

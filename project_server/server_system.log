@@ -1,0 +1,46 @@
+[Sun Jan 11 17:34:37 2026] PRICING SHM loaded successfully
+[Sun Jan 11 17:34:37 2026] Watching DBs/pricing.db for updates...
+[Sun Jan 11 17:34:37 2026] SHM attached successfully by TCP Server.
+[Sun Jan 11 17:34:37 2026] TCP Server listening on 0.0.0.0:8080
+[Sun Jan 11 17:37:28 2026] New connection from 172.30.128.1
+[Sun Jan 11 17:37:29 2026] Msg Received: ID=CAR366, State=1
+[Sun Jan 11 17:37:29 2026] Parking START recorded in DB.
+[Sun Jan 11 17:37:29 2026] Msg Received: ID=CAR507, State=1
+[Sun Jan 11 17:37:29 2026] Parking START recorded in DB.
+[Sun Jan 11 17:37:30 2026] Msg Received: ID=CAR855, State=0
+[Sun Jan 11 17:37:30 2026] Error: No open parking record found for calc_price.
+[Sun Jan 11 17:37:30 2026] Msg Received: ID=CAR204, State=0
+[Sun Jan 11 17:37:30 2026] Error: No open parking record found for calc_price.
+[Sun Jan 11 17:37:31 2026] Msg Received: ID=CAR050, State=1
+[Sun Jan 11 17:37:31 2026] Parking START recorded in DB.
+[Sun Jan 11 17:37:31 2026] Msg Received: ID=CAR366, State=0
+[Sun Jan 11 17:37:31 2026] Parking END updated in DB. Billing CAR366 | Total: 1.33 for Area: 13
+[Sun Jan 11 17:37:32 2026] Msg Received: ID=CAR089, State=0
+[Sun Jan 11 17:37:32 2026] Error: No open parking record found for calc_price.
+[Sun Jan 11 17:37:32 2026] Msg Received: ID=CAR258, State=1
+[Sun Jan 11 17:37:32 2026] Parking START recorded in DB.
+[Sun Jan 11 17:37:33 2026] Msg Received: ID=CAR269, State=0
+[Sun Jan 11 17:37:33 2026] Error: No open parking record found for calc_price.
+[Sun Jan 11 17:37:33 2026] Msg Received: ID=CAR306, State=1
+[Sun Jan 11 17:37:33 2026] Parking START recorded in DB.
+[Sun Jan 11 17:37:34 2026] Msg Received: ID=CAR507, State=0
+[Sun Jan 11 17:37:34 2026] Parking END updated in DB. Billing CAR507 | Total: 5.83 for Area: 24
+[Sun Jan 11 17:37:34 2026] Msg Received: ID=CAR924, State=1
+[Sun Jan 11 17:37:35 2026] Parking START recorded in DB.
+[Sun Jan 11 17:37:33 2026] Msg Received: ID=CAR050, State=0
+[Sun Jan 11 17:37:34 2026] Parking END updated in DB. Billing CAR050 | Total: 4.67 for Area: 20
+[Sun Jan 11 17:37:34 2026] Msg Received: ID=CAR014, State=1
+[Sun Jan 11 17:37:34 2026] Parking START recorded in DB.
+[Sun Jan 11 17:37:35 2026] Msg Received: ID=CAR333, State=1
+[Sun Jan 11 17:37:35 2026] Parking START recorded in DB.
+[Sun Jan 11 17:37:35 2026] Msg Received: ID=CAR306, State=0
+[Sun Jan 11 17:37:35 2026] Parking END updated in DB. Billing CAR306 | Total: 2.50 for Area: 14
+[Sun Jan 11 17:37:36 2026] Msg Received: ID=CAR258, State=0
+[Sun Jan 11 17:37:36 2026] Parking END updated in DB. Billing CAR258 | Total: 4.17 for Area: 18
+[Sun Jan 11 17:37:36 2026] Msg Received: ID=CAR924, State=0
+[Sun Jan 11 17:37:36 2026] Parking END updated in DB. Billing CAR924 | Total: 4.00 for Area: 25
+[Sun Jan 11 17:37:37 2026] Msg Received: ID=CAR543, State=1
+[Sun Jan 11 17:37:37 2026] Parking START recorded in DB.
+[Sun Jan 11 17:37:37 2026] Shutdown signal (2) received.
+[Sun Jan 11 17:37:37 2026] Parent: Killing child process 8280
+[Sun Jan 11 17:37:37 2026] Shutdown signal (15) received.
