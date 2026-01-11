@@ -1357,15 +1357,15 @@ int main(void)
  8000fa6:	e7fd      	b.n	8000fa4 <main+0x90>
  8000fa8:	2000041c 	.word	0x2000041c
  8000fac:	40020400 	.word	0x40020400
- 8000fb0:	0800cbb0 	.word	0x0800cbb0
+ 8000fb0:	0800cbac 	.word	0x0800cbac
  8000fb4:	200009e4 	.word	0x200009e4
- 8000fb8:	0800cb44 	.word	0x0800cb44
+ 8000fb8:	0800cb40 	.word	0x0800cb40
  8000fbc:	08001575 	.word	0x08001575
  8000fc0:	200009d8 	.word	0x200009d8
- 8000fc4:	0800cb68 	.word	0x0800cb68
+ 8000fc4:	0800cb64 	.word	0x0800cb64
  8000fc8:	08001601 	.word	0x08001601
  8000fcc:	200009dc 	.word	0x200009dc
- 8000fd0:	0800cb8c 	.word	0x0800cb8c
+ 8000fd0:	0800cb88 	.word	0x0800cb88
  8000fd4:	08001621 	.word	0x08001621
  8000fd8:	200009e0 	.word	0x200009e0
 
@@ -2229,7 +2229,7 @@ void CarTask(void *argument) {
  80014f4:	4603      	mov	r3, r0
  80014f6:	2b00      	cmp	r3, #0
  80014f8:	d002      	beq.n	8001500 <CarTask+0x98>
-		printf("Failed to insert msg to queue\r\n");
+		printf("Failed to add msg to queue\r\n");
  80014fa:	481c      	ldr	r0, [pc, #112]	@ (800156c <CarTask+0x104>)
  80014fc:	f009 fa3e 	bl	800a97c <puts>
 	}
@@ -2264,7 +2264,7 @@ void CarTask(void *argument) {
  800153e:	4603      	mov	r3, r0
  8001540:	2b00      	cmp	r3, #0
  8001542:	d002      	beq.n	800154a <CarTask+0xe2>
-		printf("Failed to insert msg to queue\r\n");
+		printf("Failed to add msg to queue\r\n");
  8001544:	4809      	ldr	r0, [pc, #36]	@ (800156c <CarTask+0x104>)
  8001546:	f009 fa19 	bl	800a97c <puts>
 	}
@@ -2365,8 +2365,8 @@ void StartGPSGenTask(void *argument)
  80015ec:	bf00      	nop
  80015ee:	e7c5      	b.n	800157c <StartGPSGenTask+0x8>
  80015f0:	10624dd3 	.word	0x10624dd3
- 80015f4:	0800cb18 	.word	0x0800cb18
- 80015f8:	0800cb20 	.word	0x0800cb20
+ 80015f4:	0800cb14 	.word	0x0800cb14
+ 80015f8:	0800cb1c 	.word	0x0800cb1c
  80015fc:	08001469 	.word	0x08001469
 
 08001600 <blinking_led>:
@@ -12720,7 +12720,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(const RCC_ClkInitTypeDef  *RCC_ClkInitStru
  8004efa:	bf00      	nop
  8004efc:	40023c00 	.word	0x40023c00
  8004f00:	40023800 	.word	0x40023800
- 8004f04:	0800cbc8 	.word	0x0800cbc8
+ 8004f04:	0800cbc4 	.word	0x0800cbc4
  8004f08:	20000000 	.word	0x20000000
  8004f0c:	20000004 	.word	0x20000004
 
@@ -13022,7 +13022,7 @@ uint32_t HAL_RCC_GetPCLK1Freq(void)
  8005150:	4618      	mov	r0, r3
  8005152:	bd80      	pop	{r7, pc}
  8005154:	40023800 	.word	0x40023800
- 8005158:	0800cbd8 	.word	0x0800cbd8
+ 8005158:	0800cbd4 	.word	0x0800cbd4
 
 0800515c <HAL_RCC_GetPCLK2Freq>:
   * @note   Each time PCLK2 changes, this function must be called to update the
@@ -13048,7 +13048,7 @@ uint32_t HAL_RCC_GetPCLK2Freq(void)
  8005178:	4618      	mov	r0, r3
  800517a:	bd80      	pop	{r7, pc}
  800517c:	40023800 	.word	0x40023800
- 8005180:	0800cbd8 	.word	0x0800cbd8
+ 8005180:	0800cbd4 	.word	0x0800cbd4
 
 08005184 <HAL_RCCEx_PeriphCLKConfig>:
   *         the backup registers) are set to their reset values.
@@ -22017,7 +22017,7 @@ BaseType_t xReturn;
  800833a:	46bd      	mov	sp, r7
  800833c:	bd80      	pop	{r7, pc}
  800833e:	bf00      	nop
- 8008340:	0800cb2c 	.word	0x0800cb2c
+ 8008340:	0800cb28 	.word	0x0800cb28
  8008344:	08008999 	.word	0x08008999
  8008348:	20001c0c 	.word	0x20001c0c
  800834c:	20001c08 	.word	0x20001c08
@@ -23960,7 +23960,7 @@ BaseType_t xReturn = pdFAIL;
  8008db8:	bd80      	pop	{r7, pc}
  8008dba:	bf00      	nop
  8008dbc:	20001c44 	.word	0x20001c44
- 8008dc0:	0800cb34 	.word	0x0800cb34
+ 8008dc0:	0800cb30 	.word	0x0800cb30
  8008dc4:	08008f0d 	.word	0x08008f0d
  8008dc8:	20001c48 	.word	0x20001c48
 
@@ -25081,7 +25081,7 @@ static void prvCheckForValidListAndQueue( void )
  80093f4:	20001c40 	.word	0x20001c40
  80093f8:	20001cf0 	.word	0x20001cf0
  80093fc:	20001c50 	.word	0x20001c50
- 8009400:	0800cb3c 	.word	0x0800cb3c
+ 8009400:	0800cb38 	.word	0x0800cb38
 
 08009404 <pxPortInitialiseStack>:
 
@@ -26778,8 +26778,8 @@ uint8_t *puc;
  8009e08:	615a      	str	r2, [r3, #20]
  8009e0a:	bd38      	pop	{r3, r4, r5, pc}
  8009e0c:	2000001c 	.word	0x2000001c
- 8009e10:	0800cbe0 	.word	0x0800cbe0
- 8009e14:	0800cbf7 	.word	0x0800cbf7
+ 8009e10:	0800cbdc 	.word	0x0800cbdc
+ 8009e14:	0800cbf3 	.word	0x0800cbf3
  8009e18:	abcd330e 	.word	0xabcd330e
  8009e1c:	e66d1234 	.word	0xe66d1234
  8009e20:	0005deec 	.word	0x0005deec
@@ -26823,8 +26823,8 @@ uint8_t *puc;
  8009e7a:	f020 4000 	bic.w	r0, r0, #2147483648	@ 0x80000000
  8009e7e:	bd10      	pop	{r4, pc}
  8009e80:	2000001c 	.word	0x2000001c
- 8009e84:	0800cbe0 	.word	0x0800cbe0
- 8009e88:	0800cbf7 	.word	0x0800cbf7
+ 8009e84:	0800cbdc 	.word	0x0800cbdc
+ 8009e88:	0800cbf3 	.word	0x0800cbf3
  8009e8c:	abcd330e 	.word	0xabcd330e
  8009e90:	e66d1234 	.word	0xe66d1234
  8009e94:	0005deec 	.word	0x0005deec
@@ -27252,11 +27252,11 @@ uint8_t *puc;
  800a2a4:	e7ee      	b.n	800a284 <_printf_float+0x2a4>
  800a2a6:	bf00      	nop
  800a2a8:	7fefffff 	.word	0x7fefffff
- 800a2ac:	0800cc53 	.word	0x0800cc53
- 800a2b0:	0800cc4f 	.word	0x0800cc4f
- 800a2b4:	0800cc5b 	.word	0x0800cc5b
- 800a2b8:	0800cc57 	.word	0x0800cc57
- 800a2bc:	0800cc5f 	.word	0x0800cc5f
+ 800a2ac:	0800cc4f 	.word	0x0800cc4f
+ 800a2b0:	0800cc4b 	.word	0x0800cc4b
+ 800a2b4:	0800cc57 	.word	0x0800cc57
+ 800a2b8:	0800cc53 	.word	0x0800cc53
+ 800a2bc:	0800cc5b 	.word	0x0800cc5b
  800a2c0:	6da3      	ldr	r3, [r4, #88]	@ 0x58
  800a2c2:	f8dd a028 	ldr.w	sl, [sp, #40]	@ 0x28
  800a2c6:	4553      	cmp	r3, sl
@@ -27734,8 +27734,8 @@ uint8_t *puc;
  800a73c:	2500      	movs	r5, #0
  800a73e:	f104 0619 	add.w	r6, r4, #25
  800a742:	e7f5      	b.n	800a730 <_printf_i+0x220>
- 800a744:	0800cc61 	.word	0x0800cc61
- 800a748:	0800cc72 	.word	0x0800cc72
+ 800a744:	0800cc5d 	.word	0x0800cc5d
+ 800a748:	0800cc6e 	.word	0x0800cc6e
 
 0800a74c <std>:
  800a74c:	2300      	movs	r3, #0
@@ -28408,9 +28408,9 @@ uint8_t *puc;
  800ad0c:	e7f3      	b.n	800acf6 <__assert_func+0x12>
  800ad0e:	bf00      	nop
  800ad10:	2000001c 	.word	0x2000001c
- 800ad14:	0800cc83 	.word	0x0800cc83
- 800ad18:	0800cc90 	.word	0x0800cc90
- 800ad1c:	0800ccbe 	.word	0x0800ccbe
+ 800ad14:	0800cc7f 	.word	0x0800cc7f
+ 800ad18:	0800cc8c 	.word	0x0800cc8c
+ 800ad1c:	0800ccba 	.word	0x0800ccba
 
 0800ad20 <quorem>:
  800ad20:	e92d 4ff7 	stmdb	sp!, {r0, r1, r2, r4, r5, r6, r7, r8, r9, sl, fp, lr}
@@ -28795,15 +28795,15 @@ uint8_t *puc;
  800b0f4:	3fc68a28 	.word	0x3fc68a28
  800b0f8:	509f79fb 	.word	0x509f79fb
  800b0fc:	3fd34413 	.word	0x3fd34413
- 800b100:	0800cbe0 	.word	0x0800cbe0
- 800b104:	0800cccc 	.word	0x0800cccc
+ 800b100:	0800cbdc 	.word	0x0800cbdc
+ 800b104:	0800ccc8 	.word	0x0800ccc8
  800b108:	7ff00000 	.word	0x7ff00000
- 800b10c:	0800cc60 	.word	0x0800cc60
+ 800b10c:	0800cc5c 	.word	0x0800cc5c
  800b110:	3ff80000 	.word	0x3ff80000
  800b114:	0800cde0 	.word	0x0800cde0
- 800b118:	0800cd24 	.word	0x0800cd24
- 800b11c:	0800ccc8 	.word	0x0800ccc8
- 800b120:	0800cc5f 	.word	0x0800cc5f
+ 800b118:	0800cd20 	.word	0x0800cd20
+ 800b11c:	0800ccc4 	.word	0x0800ccc4
+ 800b120:	0800cc5b 	.word	0x0800cc5b
  800b124:	f8d9 301c 	ldr.w	r3, [r9, #28]
  800b128:	6018      	str	r0, [r3, #0]
  800b12a:	9b03      	ldr	r3, [sp, #12]
@@ -29662,8 +29662,8 @@ uint8_t *puc;
  800b9c0:	f000 f8b2 	bl	800bb28 <__multadd>
  800b9c4:	9002      	str	r0, [sp, #8]
  800b9c6:	e7eb      	b.n	800b9a0 <_dtoa_r+0xb70>
- 800b9c8:	0800cd24 	.word	0x0800cd24
- 800b9cc:	0800ccbf 	.word	0x0800ccbf
+ 800b9c8:	0800cd20 	.word	0x0800cd20
+ 800b9cc:	0800ccbb 	.word	0x0800ccbb
 
 0800b9d0 <_free_r>:
  800b9d0:	b538      	push	{r3, r4, r5, lr}
@@ -29787,8 +29787,8 @@ uint8_t *puc;
  800bad4:	e9c0 3303 	strd	r3, r3, [r0, #12]
  800bad8:	e7f7      	b.n	800baca <_Balloc+0x66>
  800bada:	bf00      	nop
- 800badc:	0800cbe0 	.word	0x0800cbe0
- 800bae0:	0800cd35 	.word	0x0800cd35
+ 800badc:	0800cbdc 	.word	0x0800cbdc
+ 800bae0:	0800cd31 	.word	0x0800cd31
 
 0800bae4 <_Bfree>:
  800bae4:	b570      	push	{r4, r5, r6, lr}
@@ -29816,8 +29816,8 @@ uint8_t *puc;
  800bb18:	6021      	str	r1, [r4, #0]
  800bb1a:	f843 4022 	str.w	r4, [r3, r2, lsl #2]
  800bb1e:	bd70      	pop	{r4, r5, r6, pc}
- 800bb20:	0800cbe0 	.word	0x0800cbe0
- 800bb24:	0800cd35 	.word	0x0800cd35
+ 800bb20:	0800cbdc 	.word	0x0800cbdc
+ 800bb24:	0800cd31 	.word	0x0800cd31
 
 0800bb28 <__multadd>:
  800bb28:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
@@ -29871,8 +29871,8 @@ uint8_t *puc;
  800bba4:	6125      	str	r5, [r4, #16]
  800bba6:	4620      	mov	r0, r4
  800bba8:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
- 800bbac:	0800cd24 	.word	0x0800cd24
- 800bbb0:	0800cd35 	.word	0x0800cd35
+ 800bbac:	0800cd20 	.word	0x0800cd20
+ 800bbb0:	0800cd31 	.word	0x0800cd31
 
 0800bbb4 <__hi0bits>:
  800bbb4:	f5b0 3f80 	cmp.w	r0, #65536	@ 0x10000
@@ -29962,8 +29962,8 @@ uint8_t *puc;
  800bc6a:	6103      	str	r3, [r0, #16]
  800bc6c:	bd10      	pop	{r4, pc}
  800bc6e:	bf00      	nop
- 800bc70:	0800cd24 	.word	0x0800cd24
- 800bc74:	0800cd35 	.word	0x0800cd35
+ 800bc70:	0800cd20 	.word	0x0800cd20
+ 800bc74:	0800cd31 	.word	0x0800cd31
 
 0800bc78 <__multiply>:
  800bc78:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
@@ -30082,8 +30082,8 @@ uint8_t *puc;
  800bdae:	e79f      	b.n	800bcf0 <__multiply+0x78>
  800bdb0:	3e01      	subs	r6, #1
  800bdb2:	e7a1      	b.n	800bcf8 <__multiply+0x80>
- 800bdb4:	0800cd24 	.word	0x0800cd24
- 800bdb8:	0800cd35 	.word	0x0800cd35
+ 800bdb4:	0800cd20 	.word	0x0800cd20
+ 800bdb8:	0800cd31 	.word	0x0800cd31
 
 0800bdbc <__pow5mult>:
  800bdbc:	e92d 43f8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
@@ -30151,9 +30151,9 @@ uint8_t *puc;
  800be5c:	4630      	mov	r0, r6
  800be5e:	e8bd 83f8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
  800be62:	bf00      	nop
- 800be64:	0800cdac 	.word	0x0800cdac
- 800be68:	0800cbe0 	.word	0x0800cbe0
- 800be6c:	0800cd35 	.word	0x0800cd35
+ 800be64:	0800cda8 	.word	0x0800cda8
+ 800be68:	0800cbdc 	.word	0x0800cbdc
+ 800be6c:	0800cd31 	.word	0x0800cd31
 
 0800be70 <__lshift>:
  800be70:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
@@ -30232,8 +30232,8 @@ uint8_t *puc;
  800bf3a:	d8f9      	bhi.n	800bf30 <__lshift+0xc0>
  800bf3c:	e7ea      	b.n	800bf14 <__lshift+0xa4>
  800bf3e:	bf00      	nop
- 800bf40:	0800cd24 	.word	0x0800cd24
- 800bf44:	0800cd35 	.word	0x0800cd35
+ 800bf40:	0800cd20 	.word	0x0800cd20
+ 800bf44:	0800cd31 	.word	0x0800cd31
 
 0800bf48 <__mcmp>:
  800bf48:	690a      	ldr	r2, [r1, #16]
@@ -30369,8 +30369,8 @@ uint8_t *puc;
  800c09a:	3f01      	subs	r7, #1
  800c09c:	e7e7      	b.n	800c06e <__mdiff+0xee>
  800c09e:	bf00      	nop
- 800c0a0:	0800cd24 	.word	0x0800cd24
- 800c0a4:	0800cd35 	.word	0x0800cd35
+ 800c0a0:	0800cd20 	.word	0x0800cd20
+ 800c0a4:	0800cd31 	.word	0x0800cd31
 
 0800c0a8 <__d2b>:
  800c0a8:	e92d 43f7 	stmdb	sp!, {r0, r1, r2, r4, r5, r6, r7, r8, r9, lr}
@@ -30436,8 +30436,8 @@ uint8_t *puc;
  800c146:	f7ff fd35 	bl	800bbb4 <__hi0bits>
  800c14a:	ebc0 1042 	rsb	r0, r0, r2, lsl #5
  800c14e:	e7e5      	b.n	800c11c <__d2b+0x74>
- 800c150:	0800cd24 	.word	0x0800cd24
- 800c154:	0800cd35 	.word	0x0800cd35
+ 800c150:	0800cd20 	.word	0x0800cd20
+ 800c154:	0800cd31 	.word	0x0800cd31
 
 0800c158 <__ssputs_r>:
  800c158:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
@@ -30714,11 +30714,11 @@ uint8_t *puc;
  800c3ec:	4638      	mov	r0, r7
  800c3ee:	f7fe f88f 	bl	800a510 <_printf_i>
  800c3f2:	e7ed      	b.n	800c3d0 <_svfiprintf_r+0x1c0>
- 800c3f4:	0800cd8e 	.word	0x0800cd8e
- 800c3f8:	0800cd98 	.word	0x0800cd98
+ 800c3f4:	0800cd8a 	.word	0x0800cd8a
+ 800c3f8:	0800cd94 	.word	0x0800cd94
  800c3fc:	08009fe1 	.word	0x08009fe1
  800c400:	0800c159 	.word	0x0800c159
- 800c404:	0800cd94 	.word	0x0800cd94
+ 800c404:	0800cd90 	.word	0x0800cd90
 
 0800c408 <__sflush_r>:
  800c408:	f9b1 200c 	ldrsh.w	r2, [r1, #12]
@@ -31393,11 +31393,11 @@ uint8_t *puc;
  800c9f8:	4630      	mov	r0, r6
  800c9fa:	f7fd fd89 	bl	800a510 <_printf_i>
  800c9fe:	e7e4      	b.n	800c9ca <_vfiprintf_r+0x1e6>
- 800ca00:	0800cd8e 	.word	0x0800cd8e
- 800ca04:	0800cd98 	.word	0x0800cd98
+ 800ca00:	0800cd8a 	.word	0x0800cd8a
+ 800ca04:	0800cd94 	.word	0x0800cd94
  800ca08:	08009fe1 	.word	0x08009fe1
  800ca0c:	0800c7bf 	.word	0x0800c7bf
- 800ca10:	0800cd94 	.word	0x0800cd94
+ 800ca10:	0800cd90 	.word	0x0800cd90
 
 0800ca14 <_raise_r>:
  800ca14:	291f      	cmp	r1, #31
